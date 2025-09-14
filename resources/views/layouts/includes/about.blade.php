@@ -5,7 +5,7 @@
                 <!-- Main Heading Starts -->
                 <div class="text-center top-text">
                     <h1><span>About</span> Us</h1>
-                    <h4>{{ __('messages.welcome') }}</h4>
+                    <h4>{{ __($ns.'.about.title') }}</h4>
                 </div>
                 <!-- Main Heading Ends -->
                 <!-- Divider Starts -->
@@ -16,51 +16,81 @@
                 </div>
                 <!-- Divider Ends -->
                 <!-- About Content Starts -->
-                <div class="row about-content">
-                    <div class="col-sm-12 col-md-6 col-lg-6 about-left-side">
-                        <h3 class="title-about">WE ARE <strong>AMIRA</strong></h3>
-                        <hr>
-                        <p>We are a leading company sit amet, consectetur adipisicing elit. Minus obcaecati pariatur officiis molestias eveniet harum laudantium obcaecati pariatur officiis molestias eveniet harum laudantium sed optio iste. </p>
-                        <!-- Tabs Heading Starts -->
-                        <ul class="nav nav-tabs">
-                            <li class="active"><a data-toggle="tab" href="#menu1">Our Mission</a></li>
-                            <li><a data-toggle="tab" href="#menu2">Our advantages</a></li>
-                            <li><a data-toggle="tab" href="#menu3">Our guarantees</a></li>
-                        </ul>
-                        <!-- Tabs Heading Ends -->
-                        <!-- Tabs Content Starts -->
-                        <div class="tab-content">
-                            <div id="menu1" class="tab-pane fade in active">
-                                <p>consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in</p>
-                            </div>
-                            <div id="menu2" class="tab-pane fade">
-                                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                            </div>
-                            <div id="menu3" class="tab-pane fade">
-                                <p>Laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
-                            </div>
-                        </div>
-                        <!-- Tabs Content Ends -->
-                        <a class="custom-button" href="about.html">Learn more about us</a>
-                    </div>
-                    <div class="col-md-6 col-lg-6 about-right-side">
-                        <div class="full-image-container hovered">
-                            <img class="img-responsive hidden-xs" src="http://via.placeholder.com/1024x681" alt="">
-                            <div class="full-image-overlay">
-                                <h3>Why <strong>Choose Us</strong></h3>
-                                <ul class="list-why-choose-us">
-                                    <li>Clean Code & Design</li>
-                                    <li>Responsive Layout</li>
-                                    <li>Powerful Documentation</li>
-                                    <li>Browser Compatibility</li>
-                                    <li>Easy Customization</li>
-                                    <li>& Much More ...</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- About Content Ends -->
+<div class="row about-content">
+  <div class="col-sm-12 col-md-6 col-lg-6 about-left-side">
+    <h3 class="title-about">WE ARE <strong>AMIRA</strong></h3>
+    <hr>
+
+    {{-- الفقرة التعريفية --}}
+    <p>{{ __($ns.'.about.intro') }}</p>
+
+    <!-- Tabs Heading Starts -->
+    <ul class="nav nav-tabs">
+      <li class="active"><a data-toggle="tab" href="#menu1">{{ __($ns.'.about.tabs.mission.title') }}</a></li>
+      <li><a data-toggle="tab" href="#menu2">{{ __($ns.'.about.tabs.advantages.title') }}</a></li>
+      <li><a data-toggle="tab" href="#menu3">{{ __($ns.'.about.tabs.guarantees.title') }}</a></li>
+    </ul>
+    <!-- Tabs Heading Ends -->
+
+    <!-- Tabs Content Starts -->
+    <div class="tab-content">
+      {{-- Mission --}}
+      <div id="menu1" class="tab-pane fade in active">
+        <p>{{ __($ns.'.about.tabs.mission.body') }}</p>
+      </div>
+
+      {{-- Advantages --}}
+      <div id="menu2" class="tab-pane fade">
+        @php($advantages = Lang::get($ns.'.about.tabs.advantages.items'))
+        @if(is_array($advantages))
+          <ul>
+            @foreach($advantages as $item)
+              <li>{{ $item }}</li>
+            @endforeach
+          </ul>
+        @endif
+      </div>
+
+      {{-- Guarantees --}}
+      <div id="menu3" class="tab-pane fade">
+        @php($guarantees = Lang::get($ns.'.about.tabs.guarantees.items'))
+        @if(is_array($guarantees))
+          <ul>
+            @foreach($guarantees as $item)
+              <li>{{ $item }}</li>
+            @endforeach
+          </ul>
+        @endif
+      </div>
+    </div>
+    <!-- Tabs Content Ends -->
+
+    <a class="custom-button" href="{{ route('index') }}">{{ __('common.actions.read_more') }}</a>
+  </div>
+
+  <div class="col-md-6 col-lg-6 about-right-side">
+    <div class="full-image-container hovered">
+      {{-- يُفضَّل استبدال placeholder بصورة محلية لتفادي أخطاء التحميل --}}
+      <img class="img-responsive hidden-xs" src="{{ asset('assets/images/about-hero.jpg') }}" alt="">
+
+      <div class="full-image-overlay">
+        <h3>Why <strong>Choose Us</strong></h3>
+
+        {{-- نعرض نفس مزايا القسم كقائمة جانبية للحفاظ على الستايل --}}
+        @php($advantagesRight = Lang::get($ns.'.about.tabs.advantages.items'))
+        @if(is_array($advantagesRight))
+          <ul class="list-why-choose-us">
+            @foreach($advantagesRight as $item)
+              <li>{{ $item }}</li>
+            @endforeach
+          </ul>
+        @endif
+      </div>
+    </div>
+  </div>
+</div>
+<!-- About Content Ends -->
+
             </div>
             <!-- Container Ends -->
         </section>

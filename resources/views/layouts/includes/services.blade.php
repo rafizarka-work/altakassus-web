@@ -5,7 +5,7 @@
                 <!-- Main Heading Starts -->
                 <div class="text-center top-text">
                     <h1><span>Our</span> Services</h1>
-                    <h4>What We Doing</h4>
+                    <h4>{{ __($ns.'.services.title') }}</h4>
                 </div>
                 <!-- Main Heading Starts -->
                 <!-- Divider Starts -->
@@ -17,6 +17,11 @@
                 <!-- Divider Ends -->
                 <!-- Services Starts -->
                 <div class="row services-box">
+                     @php
+                    // استدعاء المصفوفة كاملة من ملف اللغة
+                    $services = __($ns.'.services.items');
+                    @endphp
+                    @foreach($services as $srv)
                     <!-- Service Item Starts -->
                     <div class="col-lg-4 col-md-6 col-sm-12 services-box-item">
                         <!-- Service Item Cover Starts -->
@@ -24,13 +29,13 @@
                         <!-- Service Item Cover Ends -->
                         <!-- Service Item Content Starts -->
                         <div class="services-box-item-content fa fa-leaf">
-                            <h2>Creative Solutions</h2>
+                            <h2>{{ $srv['title'] }}</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu.</p>
                         </div>
                         <!-- Service Item Content Ends -->
                     </div>
                     <!-- Service Item Ends -->
-
+{{-- 
                     <!-- Service Item Starts -->
                     <div class="col-lg-4 col-md-6 col-sm-12 services-box-item">
                         <!-- Service Item Cover Starts -->
@@ -97,8 +102,8 @@
                         </div>
                         <!-- Service Item Content Ends -->
                     </div>
-                    <!-- Service Item Ends -->
-
+                    <!-- Service Item Ends --> --}}
+ @endforeach
                 </div>
                 <!-- Services Ends -->
             </div>
