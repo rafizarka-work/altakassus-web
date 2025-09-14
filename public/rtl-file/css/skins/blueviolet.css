@@ -1,5 +1,5 @@
 /* =================================================================== */
-/* Blue #246599
+/* Blueviolet #8a2be2
 ====================================================================== */
 a,
 h1 > span,
@@ -62,12 +62,12 @@ h4.panel-title a,
 .project .project-navigation nav ul li a,
 .shop-cart .secondary-button,
 .payment .tooltip-text{
-    color: #246599;
+    color: #8a2be2;
 }
 .custom-colorRotatingWords,
 .team .social-icons ul.social li a:hover,
 .team .social-icons ul.social li a:hover:before {
-	color: #246599 !important;
+	color: #8a2be2 !important;
 }
 .latest-post .post-date,
 .shop-cart .secondary-button:hover,
@@ -108,76 +108,76 @@ body.double-diagonal .logos::before,
 .team-member:hover .team-member-caption,
 .btn-wrapper a:hover,
 .widget-tags ul > li a:hover   {
-    background-color: #246599;
+    background-color: #8a2be2;
 }
 body.blog-page .pagination li.active a,
 .widget-tags ul > li a:hover,
 .shop-cart .secondary-button {
-	border:1px solid #246599;
+	border:1px solid #8a2be2;
 }
 .about-right-side .full-image-container.hovered:before  {
-	border-left: 5px solid #246599;
+	border-right: 5px solid #8a2be2;
 }
 .projectmanager blockquote,
 #quote-carousel .carousel-indicators .active {
-    border-color: #246599;
+    border-color: #8a2be2;
 }
 .projectmanagerpicture {
-    border: 12px solid #246599;
+    border: 12px solid #8a2be2;
 }
 .portfolio .nav-pills li {
-    border: 2px solid #246599;
+    border: 2px solid #8a2be2;
 }
 #back-top a {
-    border: 2px solid #246599;
+    border: 2px solid #8a2be2;
 }
 .team-member-caption {
-	border-top: 3px solid #246599;
+	border-top: 3px solid #8a2be2;
 }
 .social-icons ul li a{
-    border: 3px solid #246599;
+    border: 3px solid #8a2be2;
 }
 .footer .social-icons ul li a {
-    border: 2px solid #246599;
+    border: 2px solid #8a2be2;
 }
 .banner hr, body.dark .banner hr {
-	border-top: 5px solid #246599;
+	border-top: 5px solid #8a2be2;
 }
 .preloader .loader {
-  background-image: url(../../img/preloaders/preloader-blue-light.svg);
+  background-image: url(../../img/preloaders/preloader-blueviolet-light.svg);
   background-repeat:no-repeat;
   background-position: 50% 50%;
 }
 body.dark .preloader .loader {
-  background-image: url(../../img/preloaders/preloader-blue-dark.svg);
+  background-image: url(../../img/preloaders/preloader-blueviolet-dark.svg);
   background-repeat:no-repeat;
   background-position: 50% 50%;
 }
 .btn-wrapper a {
-	border: 4px solid #246599;
+	border: 4px solid #8a2be2;
 }
 @media (max-width: 991px) {
 	ul.nav li.dropdown ul.dropdown-menu li.active a,
 	body.dark ul.nav li.dropdown ul.dropdown-menu li.active a	{
 		background:transparent !important;
-		color:#246599 !important;
+		color:#8a2be2 !important;
 	}
 }
 @media (max-width:767px){
 	.social-icons ul li a {
-		border: 2px solid #246599;
+		border: 2px solid #8a2be2;
 	}
 	.about-right-side .full-image-container.hovered:before  {
-		border-top: 5px solid #246599;
-		border-left:none;
+		border-top: 5px solid #8a2be2;
+		border-right:none;
 	}
 	.rtl-version .about-right-side .full-image-container.hovered:before {
-		border-right:none;
+		border-left:none;
 	}
 }
 @media (max-width:576px){
 	.about-content ul.nav.nav-tabs li.active a {
-		background :#246599;
+		background :#8a2be2;
 		color:#fff;
 	}
 }

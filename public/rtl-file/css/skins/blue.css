@@ -116,7 +116,7 @@ body.blog-page .pagination li.active a,
 	border:1px solid #246599;
 }
 .about-right-side .full-image-container.hovered:before  {
-	border-left: 5px solid #246599;
+	border-right: 5px solid #246599;
 }
 .projectmanager blockquote,
 #quote-carousel .carousel-indicators .active {
@@ -169,10 +169,10 @@ body.dark .preloader .loader {
 	}
 	.about-right-side .full-image-container.hovered:before  {
 		border-top: 5px solid #246599;
-		border-left:none;
+		border-right:none;
 	}
 	.rtl-version .about-right-side .full-image-container.hovered:before {
-		border-right:none;
+		border-left:none;
 	}
 }
 @media (max-width:576px){
