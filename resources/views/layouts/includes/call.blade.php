@@ -5,19 +5,19 @@
                 <div class="container">
                     <!-- Main Heading Starts -->
                     <div class="text-center top-text">
-                        <h1><span>create</span> account</h1>
-                        <h4>get started absolutely free</h4>
+                        <h1><span>{{ __($ns . '.contact.title') }}</span></h1>
+                        <h4>{{ __($ns . '.contact.subtitle') }}</h4>
                     </div>
                     <!-- Main Heading Starts -->
                     <!-- Call To Action Starts -->
                     <div class="call-to-action-content">
                         <ul>
-                            <li>No Credit Card Required</li>
-                            <li>100% Match Deposit Bonus</li>
-                            <li>Monthly Free Files</li>
-                            <li>Daily Newsletter</li>
+                            <li>{{ __($ns . '.contact.content') }}</li>
+                            <li>{{ __($ns . '.contact.content') }}</li>
+                            <li>{{ __($ns . '.contact.content') }}</li>
+                            <li>{{ __($ns . '.contact.content') }}</li>
                         </ul>
-                        <a class="custom-button" href="register.html">register now</a>
+                        <a class="custom-button" href="register.html">{{ __($ns . '.contact.lebel') }}</a>
                     </div>
                     <!-- Call To Action Ends -->
                 </div>
