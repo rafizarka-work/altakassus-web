@@ -1,0 +1,36 @@
+<?php
+
+return [
+    'brand' => 'altakassus',
+    'menu' => [
+        'title' => 'altakassus',
+        'home' => 'Home',
+        'about' => 'About',
+        'pricing' => 'Pricing',
+        'portfolio' => 'Portfolio',
+        'blog' => 'Blog',
+    ],
+    'contact' => [
+        'title' => 'Contact Us',
+        'email' => 'contact@website.com',
+        'phone' => '00216 21 184 010',
+        'address' => 'London, England',
+        'hours' => 'Mon–Sat 08am → 05pm',
+        'skype' => 'amira.skype',
+    ],
+    'facts' => [
+        'projects' => 'projects',
+        'hours_work' => 'hours work',
+        'offices' => 'offices',
+        'clients' => 'clients',
+    ],
+    'social' => [
+        'twitter' => 'twitter',
+        'facebook' => 'facebook',
+        'google' => 'google',
+        'linkedin' => 'linkedin',
+        'youtube' => 'youtube',
+    ],
+    'copyright' => 'Copyright © :year :brand All Rights Reserved | Created with Love by :author',
+    'author_name' => 'celtano',
+];

@@ -1,4 +1,5 @@
 {
+    
     "$schema": "https://json.schemastore.org/package.json",
     "private": true,
     "type": "module",
@@ -15,3 +16,4 @@
         "vite": "^7.0.4"
     }
 }
+

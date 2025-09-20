@@ -2,215 +2,217 @@
 
 return [
     'about' => [
-        'title' => 'عن شركة التخصص للمقاولات',
-        'intro' => 'نحن في شركة التخصص نضع خبرة تمتد لأكثر من 25 عاماً في خدمتك، لنكون الخيار الأمثل في مجال المقاولات. 
-        نجمع بين الكفاءة الفنية والالتزام بالجودة، ونطبق أحدث التقنيات العالمية لتصميم وتنفيذ مشاريع تلبي تطلعات عملائنا، 
-        سواء كانت سكنية، تجارية أو صناعية. نجاحنا يقوم على شراكات طويلة الأمد مبنية على الثقة والشفافية، 
-        ورؤيتنا هي أن نكون دائمًا شريكك الموثوق في بناء مستقبل أفضل.',
+        'title' => 'About Al-Takhasos Contracting Company',
+        'intro' => 'At Al-Takhasos Contracting, we bring over 25 years of expertise to serve you, making us the ideal choice in the contracting field. 
+        We combine technical efficiency with a commitment to quality, applying the latest global technologies to design and implement projects that meet our clients’ aspirations, 
+        whether residential, commercial, or industrial. Our success is built on long-term partnerships based on trust and transparency, 
+        and our vision is to always be your reliable partner in building a better future.',
+        'image' => 'img/about/about-cont.png',
 
         'tabs' => [
             'mission' => [
-                'title' => 'رسالتنا',
-                'body'  => 'رسالتنا هي تقديم حلول متكاملة ومبتكرة في مجال المقاولات، ترتقي بمستوى المشاريع وتضيف قيمة حقيقية لعملائنا.
-                نلتزم بتحقيق أعلى درجات الجودة والدقة، مع الالتزام بالمواعيد والميزانيات المحددة، لنكون الشريك الموثوق الذي يساعدك على تحقيق أهدافك.',
+                'title' => 'Our Mission',
+                'body'  => 'Our mission is to provide integrated and innovative solutions in contracting that elevate project standards and add real value to our clients. 
+                We are committed to achieving the highest levels of quality and precision, while adhering to timelines and budgets, to be the trusted partner that helps you achieve your goals.',
             ],
             'advantages' => [
-                'title' => 'مميزاتنا',
+                'title' => 'Our Advantages',
                 'items' => [
-                    'خبرة تمتد لأكثر من 25 عاماً.',
-                    'فريق عمل متخصص يجمع بين الخبرة والإبداع.',
-                    'حلول مخصصة لكل مشروع بما يتناسب مع احتياجات العميل.',
-                    'استخدام أحدث التقنيات في البناء.',
-                    'التزام تام بمعايير السلامة والجودة.',
-                    'دعم فني مستمر حتى بعد تسليم المشروع.',
+                    'Over 25 years of experience.',
+                    'A specialized team combining expertise and creativity.',
+                    'Tailored solutions for each project according to client needs.',
+                    'Use of the latest construction technologies.',
+                    'Full commitment to safety and quality standards.',
+                    'Continuous technical support even after project delivery.',
                 ],
             ],
             'guarantees' => [
-                'title' => 'ضماناتنا',
+                'title' => 'Our Guarantees',
                 'items' => [
-                    'ضمان جودة التنفيذ والتشطيب.',
-                    'التزامنا بالمواعيد الزمنية المحددة.',
-                    'استخدام مواد معتمدة ومطابقة للمواصفات.',
-                    'متابعة وصيانة ما بعد التسليم.',
-                    'بناء علاقات طويلة الأمد مع عملائنا تقوم على الثقة والمصداقية.',
+                    'Guaranteed execution and finishing quality.',
+                    'Commitment to agreed timelines.',
+                    'Use of certified, specification-compliant materials.',
+                    'Post-delivery follow-up and maintenance.',
+                    'Building long-term relationships with our clients based on trust and credibility.',
                 ],
             ],
         ],
     ],
 
     'services' => [
-        'title' => 'خدماتنا',
+        'title' => 'Our Services',
         'items' => [
             [
                 'key'   => 'services1',
-                'icon'  => 'fa fa-building', // مقاولات عامة
+                'icon'  => 'fa fa-building',
                 'image' => 'assets/images/s1.jpg',
-                'title' => 'مقاولات عامة',
-                'desc'  => 'تنفيذ تسليم مفتاح للمشاريع السكنية والتجارية والصناعية مع رقابة جودة صارمة.',
-                'link'  => '/ar/contact',
+                'title' => 'General Contracting',
+                'desc'  => 'Turnkey execution of residential, commercial, and industrial projects with strict quality control.',
+                'link'  => '/en/contact',
             ],
             [
                 'key'   => 'services2',
-                'icon'  => 'fa fa-key', // فلل تسليم مفتاح
-                'title' => 'فلل تسليم مفتاح',
-                'desc'  => 'تسليم شامل من التصميم حتى التسليم، وفق الميزانية والجدول الزمني.',
+                'icon'  => 'fa fa-key',
+                'title' => 'Turnkey Villas',
+                'desc'  => 'Comprehensive delivery from design to handover, within budget and schedule.',
             ],
             [
                 'key'   => 'services3',
-                'icon'  => 'fa fa-briefcase', // المكاتب
-                'title' => 'تنفيذ وتجهيز المكاتب',
-                'desc'  => 'مساحات مكتبية عصرية مع تكامل MEP وتشطيبات مطابقة للمواصفات.',
+                'icon'  => 'fa fa-briefcase',
+                'title' => 'Office Fit-out & Execution',
+                'desc'  => 'Modern office spaces with integrated MEP and spec-compliant finishes.',
             ],
             [
                 'key'   => 'services4',
-                'icon'  => 'fa fa-swimming-pool', // المسابح
-                'title' => 'إنشاء المسابح',
-                'desc'  => 'مسابح بتجهيزات عالية وجودة تنفيذ مضمونة.',
+                'icon'  => 'fa fa-swimming-pool',
+                'title' => 'Swimming Pools Construction',
+                'desc'  => 'Pools with high-end equipment and guaranteed execution quality.',
             ],
             [
                 'key'   => 'services5',
-                'icon'  => 'fa fa-gem', // الحجر والرخام
-                'title' => 'أعمال الحجر والرخام',
-                'desc'  => 'تشطيبات دقيقة باستخدام أفضل أنواع الحجر والرخام.',
+                'icon'  => 'fa fa-gem',
+                'title' => 'Stone & Marble Works',
+                'desc'  => 'Precise finishing using the best types of stone and marble.',
             ],
             [
                 'key'   => 'services6',
-                'icon'  => 'fa fa-paint-roller', // الديكورات
-                'title' => 'ديكورات داخلية وخارجية',
-                'desc'  => 'حلول ديكور متكاملة تلائم الهوية والطابع المعماري.',
+                'icon'  => 'fa fa-paint-roller',
+                'title' => 'Interior & Exterior Decoration',
+                'desc'  => 'Integrated decoration solutions matching identity and architectural style.',
             ],
             [
                 'key'   => 'services7',
-                'icon'  => 'fa fa-utensils', // المطاعم والمقاهي
-                'title' => 'تنفيذ المطاعم والمقاهي',
-                'desc'  => 'تنفيذ متكامل يراعي الوظائف والتجربة البصرية.',
+                'icon'  => 'fa fa-utensils',
+                'title' => 'Restaurants & Cafés Execution',
+                'desc'  => 'Comprehensive execution that considers functions and visual experience.',
             ],
             [
                 'key'   => 'services8',
-                'icon'  => 'fa fa-tools', // الترميمات والتشطيبات
-                'title' => 'ترميمات وتشطيبات عامة',
-                'desc'  => 'تحسين وتجديد المساحات مع الالتزام بالمواصفات.',
+                'icon'  => 'fa fa-tools',
+                'title' => 'Renovations & General Finishing',
+                'desc'  => 'Improving and renewing spaces while adhering to specifications.',
             ],
         ],
-
     ],
 
     'projects' => [
-        'title' => 'أبرز مشاريعنا',
-        'category' => 'تكييف',
-        'category1' => 'صيانة',
+        'title' => 'Our Key Projects',
+        'category' => 'HVAC',
+        'category1' => 'Maintenance',
         'items' => [
             [
                 'key'   => 'schools',
-                'title' => 'مدارس التربية الأهلية',
-                'desc'  => 'تنفيذ مباني تعليمية متكاملة بمواصفات حديثة تلبي احتياجات البيئة التعليمية.',
+                'title' => 'Al-Tarbiyah Al-Ahliah Schools',
+                'desc'  => 'Execution of integrated educational buildings with modern specifications that meet the needs of the learning environment.',
                 'image' => 'assets/images/projects/school.jpg',
             ],
             [
                 'key'   => 'kkesh',
-                'title' => 'مستشفى الملك خالد التخصصي للعيون',
-                'desc'  => 'تنفيذ وتطوير أنظمة بنية تحتية متقدمة للمستشفى مع التزام بمعايير الجودة الصحية.',
+                'title' => 'King Khaled Eye Specialist Hospital',
+                'desc'  => 'Implementation and development of advanced infrastructure systems for the hospital with compliance to health quality standards.',
                 'image' => 'assets/images/projects/hospital-eye.jpg',
             ],
             [
                 'key'   => 'kauh',
-                'title' => 'مستشفى الملك عبدالله الجامعي',
-                'desc'  => 'حلول متكاملة في مجال الإنشاءات والتجهيزات الطبية وفق أعلى المعايير العالمية.',
+                'title' => 'King Abdullah University Hospital',
+                'desc'  => 'Comprehensive solutions in construction and medical facility outfitting according to the highest international standards.',
                 'image' => 'assets/images/projects/hospital-abdullah.jpg',
             ],
             [
                 'key'   => 'ksu',
-                'title' => 'جامعة الملك سعود للعلوم الصحية',
-                'desc'  => 'أعمال إنشاء وتجهيز مرافق جامعية حديثة تلبي احتياجات الطلاب والأكاديميين.',
+                'title' => 'King Saud University for Health Sciences',
+                'desc'  => 'Construction and outfitting of modern university facilities meeting students’ and academics’ needs.',
                 'image' => 'assets/images/projects/ksu.jpg',
             ],
             [
                 'key'   => 'maghamis',
-                'title' => 'مشاريع تطوير عقاري مع شركة مغامس الإعمار',
-                'desc'  => 'بناء وحدات سكنية وتجارية متكاملة بتصاميم عصرية وحلول مبتكرة.',
+                'title' => 'Real Estate Development Projects with Maghamis Construction',
+                'desc'  => 'Building integrated residential and commercial units with modern designs and innovative solutions.',
                 'image' => 'assets/images/projects/realestate.jpg',
             ],
             [
                 'key'   => 'zamil',
-                'title' => 'مرافق لشركة مجموعة الزامل القابضة',
-                'desc'  => 'تنفيذ مقرات ومرافق تشغيلية وإدارية لصالح مجموعة الزامل القابضة.',
+                'title' => 'Facilities for Al-Zamil Holding Group',
+                'desc'  => 'Execution of headquarters and operational/administrative facilities for Al-Zamil Holding Group.',
                 'image' => 'assets/images/projects/zamil.jpg',
             ],
         ],
     ],
 
-
     'partners' => [
-        'title' => 'شركاؤنا',
+        'title' => 'Our Partners',
         'items' => [
-            'شركة وثبة للاستثمار',
-            'شركة الشراع الغذائية',
-            'شركة أبراجي العقارية',
-            'شركة أجياد المستقبل للرخام والحجر',
-            'شركة 12 كوب',
+            'Wathbah Investment Company',
+            'Al-Shira’a Food Company',
+            'Abraji Real Estate Company',
+            'Ajyad Al-Mustaqbal Marble & Stone Company',
+            '12 Cup Company',
         ],
     ],
 
     'contact' => [
-        'title' => 'تواصل قسم المقاولات',
-        'note'  => 'جاهزون لمناقشة مشروعك وتقديم عرض مفصل يناسب احتياجاتك.',
+        'title'    => 'Contact Our Contracting Department',
+        'note'     => 'We are ready to discuss your project and provide a detailed proposal tailored to your needs.',
     ],
+
     'facts' => [
-        'title'    => 'حقائق وأرقام',
-        'subtitle' => 'أرقامنا',
+        'title'    => 'Facts & Figures',
+        'subtitle' => 'Our Numbers',
         'items' => [
             [
                 'key'   => 'projects',
                 'icon'  => 'fa fa-briefcase',
                 'count' => '76+',
-                'label' => 'مشاريع',
+                'label' => 'Projects',
             ],
             [
                 'key'   => 'hours',
                 'icon'  => 'fa fa-clock-o',
                 'count' => '90+',
-                'label' => 'ساعات عمل',
+                'label' => 'Working Hours',
             ],
             [
                 'key'   => 'offices',
                 'icon'  => 'fa fa-home',
                 'count' => '18+',
-                'label' => 'مكاتب',
+                'label' => 'Offices',
             ],
             [
                 'key'   => 'clients',
                 'icon'  => 'fa fa-user',
                 'count' => '67+',
-                'label' => 'عملاء',
+                'label' => 'Clients',
             ],
         ],
     ],
+
     'blogs' => [
-        'title'    => 'مقالاتنا',
-        'subtitle' => 'مقالات يمكن تفيدك',
+        'title'    => 'Our Articles',
+        'subtitle' => 'Articles that may benefit you',
         'items' => [
             [
-                'key'   => 'blog',
-                'title'  => 'عدد مشاريع الرياض',
-                'subtitle' => 'عدد مشاريع الرياض في سنة 2025 يقدر ب ',
-                'label' => 'اقرئ الميد',
-                'url' => 'مشاريع',
-                'image' => 'assets/images/projects/zamil.jpg',
+                'key'      => 'blog',
+                'title'    => 'Number of Projects in Riyadh',
+                'subtitle' => 'The number of projects in Riyadh in 2025 is estimated at ',
+                'label'    => 'Read More',
+                'url'      => 'projects',
+                'image'    => 'assets/images/projects/zamil.jpg',
             ],
             [
-                'key'   => 'blog',
-                'title'  => 'عدد مشاريع الرياض',
-                'subtitle' => 'عدد مشاريع الرياض في سنة 2025 يقدر ب ',
-                'label' => 'اقرئ المزيد',
-                'url' => 'مشاريع',
-                'image' => 'assets/images/projects/zamil.jpg',
+                'key'      => 'blog',
+                'title'    => 'Number of Projects in Riyadh',
+                'subtitle' => 'The number of projects in Riyadh in 2025 is estimated at ',
+                'label'    => 'Read More',
+                'url'      => 'projects',
+                'image'    => 'assets/images/projects/zamil.jpg',
             ],
         ],
     ],
+
     'contact' => [
-        'title'    => 'تواصل معنا',
-        'subtitle' => 'تواصل معنا الان',
-        'content' => 'تواصل معنا الان على الواتساب او عن طريق الاتصال عبر رقمنا',
-        'lebel'    => 'تواصل معنا',
+        'title'    => 'Contact Us',
+        'subtitle' => 'Get in Touch Now',
+        'content'  => 'Contact us now via WhatsApp or by calling our number.',
+        'lebel'    => 'Contact Us',
     ],
 ];
