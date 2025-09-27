@@ -1,5 +1,5 @@
 <!-- Portfolio Section Starts -->
-<section class="portfolio">
+<section id="portfolio" class="portfolio">
     <!-- Container Starts -->
     <div class="container">
         <!-- Main Heading Starts -->

@@ -23,4 +23,16 @@ return [
         'po_box'  => 'ص.ب 27422 – الرياض 27422',
         'cr'      => 'س.ت: 1010154582',
     ],
+     'slider' => [
+        'common' => [
+            [
+                'key'   => 'intro',
+                'image' => 'img/slider/togher.png',
+                'title' => 'نحن شركة التخصص',
+                'subtitle' => 'حلول متكاملة في المقاولات والتكييف بخبرة تتجاوز 25 عاماً.',
+                'button_text' => 'اعرف المزيد',
+                'button_link' => '#about',
+            ],
+        ],
+    ],
 ];

@@ -1,84 +1,111 @@
  <!-- Main Slider Section Starts -->
-        <section class="mainslider" id="mainslider">
-            <article class="content">
-                <div class="rev_slider_wrapper fullscreen-container" data-alias="scroll-effect76" style="background-color:#111111;padding:0px;">
-                    <!-- START REVOLUTION SLIDER 5.0.7 fullscreen mode -->
-                    <div id="rev_slider_scroll_effects" class="rev_slider fullscreenbanner" style="display:none;" data-version="5.0.7">
-                        <ul>
-                            <!-- SLIDE  -->
-                            <li data-index="rs-309" data-transition="slideoverhorizontal" data-slotamount="default" data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="1000" data-thumb="http://via.placeholder.com/100x50" data-rotate="0" data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off" data-title="WE ARE AMIRA" data-description="">
-                                <!-- MAIN IMAGE -->
-                                <img src="http://via.placeholder.com/1920x1280" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
-                                <!-- LAYERS -->
+ <section class="mainslider" id="mainslider">
+     <article class="content">
+         <div class="rev_slider_wrapper fullscreen-container" data-alias="scroll-effect76"
+             style="background-color:#111111;padding:0px;">
+             <!-- START REVOLUTION SLIDER 5.0.7 fullscreen mode -->
+             <div id="rev_slider_scroll_effects" class="rev_slider fullscreenbanner" style="display:none;"
+                 data-version="5.0.7">
+                 @php
+                     $commonSlides = Lang::get('common.slider.common');
+                     $contractingSlides = Lang::get('contracting.slider.items');
+                     $hvacSlides = Lang::get('hvac.slider.items');
 
-                                <!-- LAYER NR. 1 -->
-                                <div class="tp-caption tp-shape tp-shapewrapper   rs-parallaxlevel-0" id="slide-309-layer-1" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['bottom','bottom','bottom','bottom']" data-voffset="['0','0','0','0']" data-width="full" data-height="['400','400','400','550']" data-whitespace="nowrap" data-transform_idle="o:1;" data-style_hover="cursor:default;" data-transform_in="opacity:0;s:1500;e:Power2.easeInOut;" data-transform_out="opacity:0;s:1000;s:1000;" data-start="0" data-basealign="slide" data-responsive_offset="off" data-responsive="off" style="z-index: 5;background-color:rgba(0, 0, 0, 0.50);border-color:rgba(0, 0, 0, 0);background:linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.45) 100%);">
-                                </div>
+                     $commonSlides = is_array($commonSlides) ? $commonSlides : [];
+                     $contractingSlides = is_array($contractingSlides) ? $contractingSlides : [];
+                     $hvacSlides = is_array($hvacSlides) ? $hvacSlides : [];
 
-                                <!-- LAYER NR. 2 -->
-                                <div class="tp-caption BigBold-Title   tp-resizeme rs-parallaxlevel-0" id="slide-309-layer-2" data-x="['left','left','left','left']" data-hoffset="['50','50','30','17']" data-y="['bottom','bottom','bottom','bottom']" data-voffset="['110','110','180','160']" data-fontsize="['110','100','70','60']" data-lineheight="['100','90','60','60']" data-width="['none','none','none','400']" data-height="none" data-whitespace="['nowrap','nowrap','nowrap','normal']" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:1500;e:Power3.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];" data-mask_out="x:inherit;y:inherit;" data-start="500" data-splitin="none" data-splitout="none" data-basealign="slide" data-responsive_offset="off" style="z-index: 6; white-space: nowrap;">WE ARE AMIRA
-                                </div>
+                     $slides = array_merge($commonSlides, $contractingSlides, $hvacSlides);
+                 @endphp
 
-                                <!-- LAYER NR. 3 -->
-                                <div class="tp-caption BigBold-SubTitle   rs-parallaxlevel-0 scroll-effects-text" id="slide-309-layer-3" data-x="['left','left','left','left']" data-hoffset="['55','55','33','20']" data-y="['bottom','bottom','bottom','bottom']" data-voffset="['40','1','74','58']" data-fontsize="['15','15','15','13']" data-lineheight="['24','24','24','20']" data-width="['410','410','410','280']" data-height="['60','100','100','100']" data-whitespace="normal" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:1500;e:Power3.easeInOut;" data-transform_out="y:50px;opacity:0;s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-start="650" data-splitin="none" data-splitout="none" data-basealign="slide" data-responsive_offset="off" data-responsive="off" style="z-index: 7; min-width: 410px; max-width: 410px; max-width: 60px; max-width: 60px; white-space: normal;">Beautiful and responsive Bootstrap 3 Template for any type of creative web professional
-                                </div>
+                 <ul>
+                     @foreach ($slides as $i => $slide)
+                         @php
+                             $img = asset($slide['image'] ?? 'img/slider/placeholder.jpg');
+                             $title = $slide['title'] ?? '';
+                             $sub = $slide['subtitle'] ?? '';
+                             $btnTxt = $slide['button_text'] ?? '';
+                             $btnUrl = $slide['button_link'] ?? '#';
+                             $idx = 300 + $i; // لتوليد IDs فريدة
+                         @endphp
 
-                                <!-- LAYER NR. 4 -->
-                                <div class="tp-caption" id="slide-309-layer-4" data-x="['left','left','left','left']" data-hoffset="['480','480','30','20']" data-y="['bottom','bottom','bottom','bottom']" data-voffset="['50','50','30','20']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:1500;e:Power3.easeInOut;" data-transform_out="y:50px;opacity:0;s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-start="650" data-splitin="none" data-splitout="none" data-basealign="slide" data-responsive_offset="off" data-responsive="off" style="z-index: 8; white-space: nowrap;border-color:rgba(255, 255, 255, 0.25);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;"><a href="#about" class="custom-button slider-button scroll-to-target">learn more about us</a>
-                                </div>
-                            </li>
-                            <!-- SLIDE  -->
-                            <li data-index="rs-2" data-transition="slideoverhorizontal" data-slotamount="default" data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="1000" data-thumb="http://via.placeholder.com/100x50" data-rotate="0" data-saveperformance="off" data-title="WE ARE CREATIVE" data-description="">
-                                <!-- MAIN IMAGE -->
-                                <img src="http://via.placeholder.com/1920x1280" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
-                                <!-- LAYERS -->
+                         <!-- SLIDE -->
+                         <li data-index="rs-{{ $idx }}" data-transition="slideoverhorizontal"
+                             data-slotamount="default" data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut"
+                             data-masterspeed="1000" data-thumb="{{ $img }}" data-rotate="0"
+                             data-saveperformance="off" data-title="{{ $title }}" data-description="">
 
-                                <!-- LAYER NR. 1 -->
-                                <div class="tp-caption tp-shape tp-shapewrapper   rs-parallaxlevel-0" id="slide-309-layer-11" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['bottom','bottom','bottom','bottom']" data-voffset="['0','0','0','0']" data-width="full" data-height="['400','400','400','550']" data-whitespace="nowrap" data-transform_idle="o:1;" data-style_hover="cursor:default;" data-transform_in="opacity:0;s:1500;e:Power2.easeInOut;" data-transform_out="opacity:0;s:1000;s:1000;" data-start="0" data-basealign="slide" data-responsive_offset="off" data-responsive="off" style="z-index: 5;background-color:rgba(0, 0, 0, 0.50);border-color:rgba(0, 0, 0, 0);background:linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.45) 100%);">
-                                </div>
+                             <!-- MAIN IMAGE -->
+                             <img src="{{ $img }}" alt="{{ $title }}" data-bgposition="center center"
+                                 data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg"
+                                 data-no-retina>
 
-                                <!-- LAYER NR. 2 -->
-                                <div class="tp-caption BigBold-Title   tp-resizeme rs-parallaxlevel-0" id="slide-309-layer-70" data-x="['left','left','left','left']" data-hoffset="['50','50','30','17']" data-y="['bottom','bottom','bottom','bottom']" data-voffset="['110','110','180','160']" data-fontsize="['110','100','70','60']" data-lineheight="['100','90','60','60']" data-width="['none','none','none','400']" data-height="none" data-whitespace="['nowrap','nowrap','nowrap','normal']" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:1500;e:Power3.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];" data-mask_out="x:inherit;y:inherit;" data-start="500" data-splitin="none" data-splitout="none" data-basealign="slide" data-responsive_offset="off" style="z-index: 6; white-space: nowrap;">WE ARE CREATIVE
-                                </div>
+                             <!-- Overlay -->
+                             <div class="tp-caption tp-shape tp-shapewrapper rs-parallaxlevel-0"
+                                 id="slide-{{ $idx }}-overlay" data-x="['center','center','center','center']"
+                                 data-hoffset="['0','0','0','0']" data-y="['bottom','bottom','bottom','bottom']"
+                                 data-voffset="['0','0','0','0']" data-width="full"
+                                 data-height="['400','400','400','550']"
+                                 data-transform_in="opacity:0;s:1500;e:Power2.easeInOut;"
+                                 data-transform_out="opacity:0;s:1000;" data-start="0" data-basealign="slide"
+                                 data-responsive_offset="off" data-responsive="off"
+                                 style="z-index:5;background:linear-gradient(to bottom,rgba(0,0,0,0) 0%,rgba(0,0,0,.45) 100%);">
+                             </div>
 
-                                <!-- LAYER NR. 3 -->
-                                <div class="tp-caption BigBold-SubTitle   rs-parallaxlevel-0 scroll-effects-text" id="slide-309-layer-71" data-x="['left','left','left','left']" data-hoffset="['55','55','33','20']" data-y="['bottom','bottom','bottom','bottom']" data-voffset="['40','1','74','58']" data-fontsize="['15','15','15','13']" data-lineheight="['24','24','24','20']" data-width="['410','410','410','280']" data-height="['60','100','100','100']" data-whitespace="normal" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:1500;e:Power3.easeInOut;" data-transform_out="y:50px;opacity:0;s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-start="650" data-splitin="none" data-splitout="none" data-basealign="slide" data-responsive_offset="off" data-responsive="off" style="z-index: 7; min-width: 410px; max-width: 410px; max-width: 60px; max-width: 60px; white-space: normal;">Beautiful and responsive Bootstrap 3 Template for any type of creative web professional
-                                </div>
+                             <!-- Title -->
+                             @if ($title)
+                                 <div class="tp-caption BigBold-Title tp-resizeme"
+     id="slide-{{ $idx }}-title"
+     data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+     data-y="['middle','middle','middle','middle']" data-voffset="['-40','-40','-30','-20']"
+     data-fontsize="['64','56','42','32']" data-lineheight="['70','62','48','38']"
+     data-whitespace="normal" data-width="['900','760','540','90%']"
+     data-transform_in="y:[100%];opacity:0;s:800;e:Power3.easeInOut;"
+     data-transform_out="y:[100%];opacity:0;s:600;e:Power2.easeInOut;"
+     data-start="500"
+     style="z-index:6; white-space:normal; max-width:90vw; text-align:center;">
+  {{ $title }}
+</div>
+                             @endif
 
-                                <!-- LAYER NR. 4 -->
-                                <div class="tp-caption" id="slide-309-layer-72" data-x="['left','left','left','left']" data-hoffset="['480','480','30','20']" data-y="['bottom','bottom','bottom','bottom']" data-voffset="['50','50','30','20']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:1500;e:Power3.easeInOut;" data-transform_out="y:50px;opacity:0;s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-start="650" data-splitin="none" data-splitout="none" data-basealign="slide" data-responsive_offset="off" data-responsive="off" style="z-index: 8; white-space: nowrap;border-color:rgba(255, 255, 255, 0.25);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;"><a href="#about" class="custom-button slider-button scroll-to-target">learn more about us</a>
-                                </div>
-                            </li>
-                            <!-- SLIDE  -->
-                            <li data-index="rs-3" data-transition="slideoverhorizontal" data-slotamount="default" data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="1000" data-thumb="http://via.placeholder.com/100x50" data-rotate="0" data-saveperformance="off" data-title="WE ARE LEADERS" data-description="">
-                                <!-- MAIN IMAGE -->
-                                <img src="http://via.placeholder.com/1920x1280" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
-                                <!-- LAYERS -->
+                             <!-- Subtitle -->
+                             @if ($sub)
+                                 {{-- <div class="tp-caption BigBold-SubTitle rs-parallaxlevel-0 scroll-effects-text"
+           id="slide-{{ $idx }}-sub"
+           data-x="['left','left','left','left']" data-hoffset="['55','55','33','20']"
+           data-y="['bottom','bottom','bottom','bottom']" data-voffset="['40','1','74','58']"
+           data-fontsize="['15','15','15','13']" data-lineheight="['24','24','24','20']"
+           data-transform_in="y:[100%];opacity:0;s:1500;e:Power3.easeInOut;"
+           data-transform_out="y:50px;opacity:0;s:1000;e:Power2.easeInOut;"
+           data-start="650" style="z-index:7;white-space:normal;max-width:410px;">
+           {{ $sub }}
+      </div> --}}
+                             @endif
 
-                                <!-- LAYER NR. 1 -->
-                                <div class="tp-caption tp-shape tp-shapewrapper   rs-parallaxlevel-0" id="slide-309-layer-80" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['bottom','bottom','bottom','bottom']" data-voffset="['0','0','0','0']" data-width="full" data-height="['400','400','400','550']" data-whitespace="nowrap" data-transform_idle="o:1;" data-style_hover="cursor:default;" data-transform_in="opacity:0;s:1500;e:Power2.easeInOut;" data-transform_out="opacity:0;s:1000;s:1000;" data-start="0" data-basealign="slide" data-responsive_offset="off" data-responsive="off" style="z-index: 5;background-color:rgba(0, 0, 0, 0.50);border-color:rgba(0, 0, 0, 0);background:linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.45) 100%);">
-                                </div>
+                             <!-- Button -->
+                             @if ($btnTxt)
+                                 <div class="tp-caption" id="slide-{{ $idx }}-btn"
+                                     data-x="['left','left','left','left']" data-hoffset="['480','480','30','20']"
+                                     data-y="['bottom','bottom','bottom','bottom']" data-voffset="['50','50','30','20']"
+                                     data-transform_in="y:[100%];opacity:0;s:1500;e:Power3.easeInOut;"
+                                     data-transform_out="y:50px;opacity:0;s:1000;e:Power2.easeInOut;" data-start="650"
+                                     style="z-index:8;">
+                                     <a href="{{ url('contractors') }}" class="custom-button slider-button scroll-to-target">
+                                         {{ $btnTxt }}
+                                     </a>
+                                 </div>
+                             @endif
+                         </li>
+                     @endforeach
+                 </ul>
 
-                                <!-- LAYER NR. 2 -->
-                                <div class="tp-caption BigBold-Title   tp-resizeme rs-parallaxlevel-0" id="slide-309-layer-81" data-x="['left','left','left','left']" data-hoffset="['50','50','30','17']" data-y="['bottom','bottom','bottom','bottom']" data-voffset="['110','110','180','160']" data-fontsize="['110','100','70','60']" data-lineheight="['100','90','60','60']" data-width="['none','none','none','400']" data-height="none" data-whitespace="['nowrap','nowrap','nowrap','normal']" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:1500;e:Power3.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];" data-mask_out="x:inherit;y:inherit;" data-start="500" data-splitin="none" data-splitout="none" data-basealign="slide" data-responsive_offset="off" style="z-index: 6; white-space: nowrap;">WE ARE LEADERS
-                                </div>
 
-                                <!-- LAYER NR. 3 -->
-                                <div class="tp-caption BigBold-SubTitle   rs-parallaxlevel-0 scroll-effects-text" id="slide-309-layer-82" data-x="['left','left','left','left']" data-hoffset="['55','55','33','20']" data-y="['bottom','bottom','bottom','bottom']" data-voffset="['40','1','74','58']" data-fontsize="['15','15','15','13']" data-lineheight="['24','24','24','20']" data-width="['410','410','410','280']" data-height="['60','100','100','100']" data-whitespace="normal" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:1500;e:Power3.easeInOut;" data-transform_out="y:50px;opacity:0;s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-start="650" data-splitin="none" data-splitout="none" data-basealign="slide" data-responsive_offset="off" data-responsive="off" style="z-index: 7; min-width: 410px; max-width: 410px; max-width: 60px; max-width: 60px; white-space: normal;">Beautiful and responsive Bootstrap 3 Template for any type of creative web professional
-                                </div>
-
-                                <!-- LAYER NR. 4 -->
-                                <div class="tp-caption" id="slide-309-layer-83" data-x="['left','left','left','left']" data-hoffset="['480','480','30','20']" data-y="['bottom','bottom','bottom','bottom']" data-voffset="['50','50','30','20']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:1500;e:Power3.easeInOut;" data-transform_out="y:50px;opacity:0;s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-start="650" data-splitin="none" data-splitout="none" data-basealign="slide" data-responsive_offset="off" data-responsive="off" style="z-index: 8; white-space: nowrap;border-color:rgba(255, 255, 255, 0.25);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;"><a href="#about" class="custom-button slider-button scroll-to-target">learn more about us</a>
-                                </div>
-                            </li>
-                        </ul>
-                        <div class="tp-static-layers"></div>
-                        <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>
-                    </div>
-                </div>
-                <!-- END REVOLUTION SLIDER -->
-                <script type="text/javascript">
-                </script>
-            </article>
-        </section>
-        <!-- Main Slider Section Ends -->
+                 <div class="tp-static-layers"></div>
+                 <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>
+             </div>
+         </div>
+         <!-- END REVOLUTION SLIDER -->
+         <script type="text/javascript"></script>
+     </article>
+ </section>
+ <!-- Main Slider Section Ends -->

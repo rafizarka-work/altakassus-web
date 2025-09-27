@@ -1,11 +1,8 @@
-<!-- Header Starts -->
-<header class="header">
-    <div class="header-inner">
-        <!-- Navbar Starts -->
+<!-- Navbar Starts -->
         <nav class="navbar">
             <!-- Logo Starts -->
             <div class="logo">
-                <a data-toggle="collapse" data-target=".navbar-collapse.show" class="navbar-brand" href="{{ url('index-scroll-effects.html') }}">
+                <a data-toggle="collapse" data-target=".navbar-collapse.show" class="navbar-brand" href="{{ url('') }}">
                     <img id="logo-light" class="logo-light" src="{{ asset('img/logos/condation.svg') }}" alt="logo-light" />
                     <img id="logo-dark" class="logo-dark" src="{{ asset('img/logos/condation.svg') }}" alt="logo-dark" />
                 </a>
@@ -27,27 +24,27 @@
                 <!-- Main Menu Starts -->
                 <ul class="nav navbar-nav" id="main-navigation">
                     <li class="active">
-                        <a href="{{ url('index-scroll-effects.html') }}">
+                        <a href="{{ url('') }}">
                             <i class="fa fa-home"></i> {{ __('header.menu.home') }}
                         </a>
                     </li>
                     <li>
-                        <a href="{{ url('about.html') }}">
+                        <a href="#about">
                             <i class="fa fa-user"></i> {{ __('header.menu.about') }}
                         </a>
                     </li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <a href="#portfolio">
                             <i class="fa fa-image"></i> {{ __('header.menu.portfolio') }}
                         </a>
                     </li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <a href="#blog">
                             <i class="fa fa-edit"></i> {{ __('header.menu.blog') }}
                         </a>
                     </li>
                     <li>
-                        <a href="{{ url('contact.html') }}">
+                        <a href="#contact">
                             <i class="fa fa-envelope"></i> {{ __('header.menu.contact') }}
                         </a>
                     </li>
@@ -65,6 +62,3 @@
             <!-- Search Input Ends -->
         </nav>
         <!-- Navbar Ends -->
-    </div>
-</header>
-<!-- Header Ends -->

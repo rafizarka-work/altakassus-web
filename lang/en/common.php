@@ -23,4 +23,16 @@ return [
         'po_box'  => 'P.O.Box 27422 – Riyadh 27422',
         'cr'      => 'C.R: 1010154582',
     ],
+    'slider' => [
+    'common' => [
+        [
+            'key'   => 'intro',
+            'image' => 'img/slider/togher.png',
+            'title' => 'We Are altakassus',
+            'subtitle' => 'Integrated solutions in contracting and air conditioning with over 25 years of experience.',
+            'button_text' => 'Learn More',
+            'button_link' => '#about',
+        ],
+    ],
+],
 ];

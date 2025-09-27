@@ -7,6 +7,8 @@ return [
         'portfolio' => 'Portfolio',
         'blog'      => 'Blog',
         'contact'   => 'Contact',
+        'conditioning'  => 'Conditioning',
+        'contracting'   => 'Contracting',
     ],
     'search_placeholder' => 'Type your keyword and hit enter ...',
 ];

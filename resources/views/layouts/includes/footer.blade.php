@@ -7,7 +7,7 @@
                 <h4>{{ __('footer.menu.title') }}</h4>
                 <div class="menu">
                     <ul>
-                        <li><a href="{{ url('index.html') }}">{{ __('footer.menu.home') }}</a></li>
+                        <li><a href="{{ url('') }}">{{ __('footer.menu.home') }}</a></li>
                         <li><a href="{{ url('about.html') }}">{{ __('footer.menu.about') }}</a></li>
                         <li><a href="{{ url('pricing.html') }}">{{ __('footer.menu.pricing') }}</a></li>
                         <li><a href="{{ url('portfolio-3-columns.html') }}">{{ __('footer.menu.portfolio') }}</a></li>
@@ -25,7 +25,7 @@
                         <li><span><i class="fa fa-phone"></i> {{ __('footer.contact.phone') }}</span></li>
                         <li><span><i class="fa fa-map-marker"></i> {{ __('footer.contact.address') }}</span></li>
                         <li><span><i class="fa fa-clock-o"></i> {{ __('footer.contact.hours') }}</span></li>
-                        <li><span><i class="fa fa-skype"></i> {{ __('footer.contact.skype') }}</span></li>
+                        {{-- <li><span><i class="fa fa-skype"></i> {{ __('footer.contact.skype') }}</span></li> --}}
                     </ul>
                 </div>
             </div>

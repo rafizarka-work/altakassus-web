@@ -1,5 +1,5 @@
 <meta charset="utf-8" />
-    <title>Scroll Effects, Amira - Creative Multipurpose Template</title>
+    <title>Altakassus</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Favicon -->
@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('rtl-file/css/font-awesome.min.css') }}" />
     <link rel="stylesheet" type="text/css" href="{{ asset('rtl-file/css/magnific-popup.css') }}" />
     <link rel="stylesheet" type="text/css" href="{{ asset('rtl-file/css/style.css') }}" />
+    <link href="https://db.onlinewebfonts.com/c/4ce5fad2df30ef4ed5ee61f579ee24b7?family=CoconNextArabic-Regular" rel="stylesheet">
     {{-- <link rel="stylesheet" type="text/css" href="{{ asset('rtl-file/css/skins/red.css') }}" /> --}}
 
     <link rel="stylesheet" type="text/css" href="{{ asset('rtl-file/js/plugins/revolution/css/settings.css') }}" />
@@ -22,6 +23,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/font-awesome.min.css') }}" />
     <link rel="stylesheet" type="text/css" href="{{ asset('css/magnific-popup.css') }}" />
     <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}" />
+    <link href="https://db.onlinewebfonts.com/c/4ce5fad2df30ef4ed5ee61f579ee24b7?family=CoconNextArabic-Regular" rel="stylesheet">
     {{-- <link rel="stylesheet" type="text/css" href="{{ asset('css/skins/red.css') }}" /> --}}
     <!-- Revolution Slider CSS Files -->
     <link rel="stylesheet" type="text/css" href="{{ asset('js/plugins/revolution/css/settings.css') }}" />

@@ -1,5 +1,5 @@
 <!-- Facts Section Starts -->
-<section class="facts">
+<section id="facts" class="facts">
     <div class="section-overlay">
         <!-- Container Starts -->
         <div class="container">

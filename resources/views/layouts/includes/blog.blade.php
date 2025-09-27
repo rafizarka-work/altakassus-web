@@ -1,5 +1,5 @@
  <!-- Blog Section Starts -->
- <section class="blog">
+ <section id="blog" class="blog">
      <!-- Container Starts -->
      <div class="container">
          <!-- Main Heading Starts -->

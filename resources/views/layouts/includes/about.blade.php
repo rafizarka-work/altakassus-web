@@ -18,13 +18,13 @@
         <!-- About Content Starts -->
         <div class="row about-content">
             <div class="col-sm-12 col-md-6 col-lg-6 about-left-side">
-                <h3 class="title-about">WE ARE <strong>AMIRA</strong></h3>
+                <h3 class="title-about">WE ARE <strong>Altakassus</strong></h3>
                 <hr>
 
                 {{-- الفقرة التعريفية --}}
                 <p>{{ __($ns . '.about.intro') }}</p>
 
-                <!-- Tabs Heading Starts -->
+                <!-- Tabs Heading Starts -->    
                 <ul class="nav nav-tabs">
                     <li class="active"><a data-toggle="tab" href="#menu1">{{ __($ns . '.about.tabs.mission.title') }}</a>
                     </li>

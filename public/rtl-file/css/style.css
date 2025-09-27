@@ -87,7 +87,9 @@ Version: 1.0
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,400i,500,600,700,800');
 
 body {
-  font: 14px/22px "Raleway", Arial, Helvetica, sans-serif;
+  font-family: "CoconNextArabic-Regular" !important;
+  font-size: 14px;
+  line-height: 22px;
   color: #6e6e6e;
   background-color: #222;
   padding: 0 !important;
@@ -95,7 +97,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 .wrapper {
   overflow: hidden;
   background-color: #fff;
@@ -1420,7 +1424,7 @@ h5,
 h6 {
   color: #555;
   text-transform: uppercase;
-  font-family: "Raleway", sans-serif;
+  font-family: "CoconNextArabic-Regular";
 }
 
 h1 {
@@ -1481,7 +1485,7 @@ h6 {
 /* Paragraph */
 
 p {
-  font-family: "Raleway", sans-serif;
+  font-family: "CoconNextArabic-Regular";
   font-size: 14px;
   line-height: 1.8;
   font-weight: 400;
@@ -1709,7 +1713,7 @@ ul.navbar-nav>li>a {
   padding: 43px 12px;
   font-weight: 600;
   text-transform: uppercase;
-  font-family: "Raleway", sans-serif;
+  font-family: "CoconNextArabic-Regular";
   transition: .1s;
 }
 
@@ -3238,7 +3242,7 @@ body.dark .header.header-fixed .logo a img.logo-dark {
 ---------------------------------------- */
 
 .facts {
-  background: url("http://via.placeholder.com/1600x650");
+  background: url("/img/bg/facts.png");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -3284,7 +3288,7 @@ body.dark .header.header-fixed .logo a img.logo-dark {
 ---------------------------------------- */
 
 .call-to-action {
-  background: url("http://via.placeholder.com/1600x650");
+  background: url("/img/bg/contact.png");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;

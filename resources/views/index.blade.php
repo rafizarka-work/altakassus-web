@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-   @include('layouts.includes.styles')
+    @include('layouts.includes.styles')
 
 </head>
 
@@ -17,9 +17,17 @@
     <!-- Preloader Ends -->
     <!-- Page Wrapper Starts -->
     <div class="wrapper">
-              @include('layouts.includes.header')
-              @include('layouts.includes.slider')
-              @include('layouts.includes.footer')        
+        <header class="header">
+            <div class="header-inner">
+                @if (request()->routeIs('index'))
+                    @include('layouts.includes.navbar-home')
+                @else
+                    @include('layouts.includes.navbar-default')
+                @endif
+            </div>
+        </header>
+        @include('layouts.includes.slider')
+        @include('layouts.includes.footer')
 
         <!-- Back To Top Starts -->
         <div id="back-top-wrapper">

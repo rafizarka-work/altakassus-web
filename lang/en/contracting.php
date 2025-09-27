@@ -104,37 +104,37 @@ return [
                 'key'   => 'schools',
                 'title' => 'Al-Tarbiyah Al-Ahliah Schools',
                 'desc'  => 'Execution of integrated educational buildings with modern specifications that meet the needs of the learning environment.',
-                'image' => 'assets/images/projects/school.jpg',
+                'image' => 'img/projects/school.jpg',
             ],
             [
                 'key'   => 'kkesh',
                 'title' => 'King Khaled Eye Specialist Hospital',
                 'desc'  => 'Implementation and development of advanced infrastructure systems for the hospital with compliance to health quality standards.',
-                'image' => 'assets/images/projects/hospital-eye.jpg',
+                'image' => 'img/projects/kke.jpg',
             ],
             [
                 'key'   => 'kauh',
                 'title' => 'King Abdullah University Hospital',
                 'desc'  => 'Comprehensive solutions in construction and medical facility outfitting according to the highest international standards.',
-                'image' => 'assets/images/projects/hospital-abdullah.jpg',
+                'image' => 'img/projects/kah.jpg',
             ],
             [
                 'key'   => 'ksu',
                 'title' => 'King Saud University for Health Sciences',
                 'desc'  => 'Construction and outfitting of modern university facilities meeting students’ and academics’ needs.',
-                'image' => 'assets/images/projects/ksu.jpg',
+                'image' => 'img/projects/ksu.jpg',
             ],
             [
                 'key'   => 'maghamis',
                 'title' => 'Real Estate Development Projects with Maghamis Construction',
                 'desc'  => 'Building integrated residential and commercial units with modern designs and innovative solutions.',
-                'image' => 'assets/images/projects/realestate.jpg',
+                'image' => 'img/projects/mugamis.jpg',
             ],
             [
                 'key'   => 'zamil',
                 'title' => 'Facilities for Al-Zamil Holding Group',
                 'desc'  => 'Execution of headquarters and operational/administrative facilities for Al-Zamil Holding Group.',
-                'image' => 'assets/images/projects/zamil.jpg',
+                'image' => 'img/projects/zamil.jpg',
             ],
         ],
     ],
@@ -208,6 +208,10 @@ return [
             ],
         ],
     ],
+    'logos' => [
+        'title'    => 'Our clients',
+        'subtitle' => 'Brands we serve with trust',
+    ],
 
     'contact' => [
         'title'    => 'Contact Us',
@@ -215,4 +219,17 @@ return [
         'content'  => 'Contact us now via WhatsApp or by calling our number.',
         'lebel'    => 'Contact Us',
     ],
+    'slider' => [
+    'items' => [
+        [
+            'key'   => 'contracting_hero',
+            'image' => 'img/slider/const.png',
+            'title' => 'Go to the contracting section',
+            'subtitle' => 'Turnkey execution for residential, commercial, and industrial projects.',
+            'button_text' => 'Our Projects',
+            'button_link' => '#projects',
+        ],
+    ],
+],
+
 ];

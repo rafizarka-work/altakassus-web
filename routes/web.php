@@ -8,8 +8,7 @@ Route::group([
     'middleware' => ['localeSessionRedirect','localizationRedirect','localeViewPath'],
 ], function () {
 
-    Route::view('/', 'index')->name('index');
-
+    Route::view('/', 'index', ['ns' => 'common'])->name('index');               
     Route::view('/contractors', 'section', ['ns' => 'contracting'])->name('contractors');
 
     Route::view('/conditioning', 'section', ['ns' => 'hvac'])->name('conditioning');

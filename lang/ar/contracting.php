@@ -208,11 +208,29 @@ return [
             ],
         ],
     ],
+    'logos' => [
+        'title'    => 'عملائنا',
+        'subtitle' => 'عملائنا نُخدمهم بثقة',
+    ],
+
     'contact' => [
         'title'    => 'تواصل معنا',
         'subtitle' => 'تواصل معنا الان',
         'content' => 'تواصل معنا الان على الواتساب او عن طريق الاتصال عبر رقمنا',
         'lebel'    => 'تواصل معنا',
+    ],
+
+     'slider' => [
+        'items' => [
+            [
+                'key'   => 'contracting_hero',
+                'image' => 'img/slider/const.png',
+                'title' => 'اذهب لقسم المقاولات',
+                'subtitle' => 'تنفيذ تسليم مفتاح للمشاريع السكنية والتجارية والصناعية.',
+                'button_text' => 'مشاريعنا',
+                'button_link' => '#projects',
+            ],
+        ],
     ],
     
 ];

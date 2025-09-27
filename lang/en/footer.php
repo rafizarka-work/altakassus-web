@@ -12,9 +12,9 @@ return [
     ],
     'contact' => [
         'title' => 'Contact Us',
-        'email' => 'contact@website.com',
-        'phone' => '00216 21 184 010',
-        'address' => 'London, England',
+        'email' => 'contact@altakassus.com',
+        'phone' => '00966544977774',
+        'address' => 'rıyadh, saudi arabia',
         'hours' => 'Mon–Sat 08am → 05pm',
         'skype' => 'amira.skype',
     ],
@@ -32,5 +32,5 @@ return [
         'youtube' => 'youtube',
     ],
     'copyright' => 'Copyright © :year :brand All Rights Reserved | Created with Love by :author',
-    'author_name' => 'celtano',
+    'author_name' => 'altakassus',
 ];

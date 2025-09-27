@@ -1,5 +1,5 @@
 <!-- Call To Action Section Starts -->
-        <section class="call-to-action">
+        <section id="contact" class="call-to-action">
             <div class="section-overlay">
                 <!-- Container Starts -->
                 <div class="container">
@@ -12,9 +12,6 @@
                     <!-- Call To Action Starts -->
                     <div class="call-to-action-content">
                         <ul>
-                            <li>{{ __($ns . '.contact.content') }}</li>
-                            <li>{{ __($ns . '.contact.content') }}</li>
-                            <li>{{ __($ns . '.contact.content') }}</li>
                             <li>{{ __($ns . '.contact.content') }}</li>
                         </ul>
                         <a class="custom-button" href="register.html">{{ __($ns . '.contact.lebel') }}</a>
