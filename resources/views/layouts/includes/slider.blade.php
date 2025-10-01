@@ -59,11 +59,15 @@
      data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
      data-y="['middle','middle','middle','middle']" data-voffset="['-40','-40','-30','-20']"
      data-fontsize="['64','56','42','32']" data-lineheight="['70','62','48','38']"
-     data-whitespace="normal" data-width="['900','760','540','90%']"
+     data-whitespace="normal" data-width="['100%','100%','100%','100%']"
      data-transform_in="y:[100%];opacity:0;s:800;e:Power3.easeInOut;"
      data-transform_out="y:[100%];opacity:0;s:600;e:Power2.easeInOut;"
      data-start="500"
-     style="z-index:6; white-space:normal; max-width:90vw; text-align:center;">
+     data-textalign="['center','center','center','center']"
+     data-responsive_offset="on"
+     data-paddingleft="['0','0','0','0']"
+     data-paddingright="['0','0','0','0']"
+     style="z-index:6; white-space:normal; width:100%; text-align:center !important; padding:0 20px; box-sizing:border-box;">
   {{ $title }}
 </div>
                              @endif
@@ -85,8 +89,8 @@
                              <!-- Button -->
                              @if ($btnTxt)
                                  <div class="tp-caption" id="slide-{{ $idx }}-btn"
-                                     data-x="['left','left','left','left']" data-hoffset="['480','480','30','20']"
-                                     data-y="['bottom','bottom','bottom','bottom']" data-voffset="['50','50','30','20']"
+                                     data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                                     data-y="['middle','middle','middle','middle']" data-voffset="['80','80','80','80']"
                                      data-transform_in="y:[100%];opacity:0;s:1500;e:Power3.easeInOut;"
                                      data-transform_out="y:50px;opacity:0;s:1000;e:Power2.easeInOut;" data-start="650"
                                      style="z-index:8;">
@@ -105,7 +109,48 @@
              </div>
          </div>
          <!-- END REVOLUTION SLIDER -->
-         <script type="text/javascript"></script>
+         <script type="text/javascript">
+             // FORCE center alignment - Override Revolution Slider positioning
+             jQuery(document).ready(function($) {
+                 function forceCenterSlider() {
+                     // Target all title captions
+                     $('[id*="slide-"][id*="-title"], .tp-caption.BigBold-Title').each(function() {
+                         var $elem = $(this);
+
+                         // Remove any transform that Revolution Slider adds
+                         $elem.css({
+                             'text-align': 'center',
+                             'width': '100%',
+                             'left': '0',
+                             'right': '0',
+                             'margin-left': '0',
+                             'margin-right': '0',
+                             'transform': 'translateX(0) !important',
+                             '-webkit-transform': 'translateX(0) !important',
+                             'direction': 'ltr'
+                         });
+
+                         // Use setAttribute to force styles
+                         var forceStyle = 'text-align: center !important; width: 100% !important; left: 0 !important; right: 0 !important; direction: ltr !important;';
+                         this.setAttribute('style', (this.getAttribute('style') || '') + ';' + forceStyle);
+                     });
+                 }
+
+                 // Execute multiple times to override Revolution Slider
+                 forceCenterSlider();
+                 setTimeout(forceCenterSlider, 100);
+                 setTimeout(forceCenterSlider, 500);
+                 setTimeout(forceCenterSlider, 1000);
+                 setTimeout(forceCenterSlider, 1500);
+                 setTimeout(forceCenterSlider, 2000);
+                 setTimeout(forceCenterSlider, 3000);
+
+                 // Keep monitoring and forcing
+                 setInterval(forceCenterSlider, 2000);
+
+                 $(window).on('load', forceCenterSlider);
+             });
+         </script>
      </article>
  </section>
  <!-- Main Slider Section Ends -->

@@ -38,6 +38,21 @@
                             <i class="fa fa-snowflake-o"></i> {{ __('header.menu.conditioning') }}
                         </a>
                     </li>
+                    <li>
+                        <a href="#about">
+                            <i class="fa fa-user"></i> {{ __('header.menu.about') }}
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-globe"></i> {{ app()->getLocale() == 'ar' ? 'العربية' : 'English' }}
+                            <i class="icon-angle fa fa-angle-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{{ LaravelLocalization::getLocalizedURL('en', null, [], true) }}">English</a></li>
+                            <li><a href="{{ LaravelLocalization::getLocalizedURL('ar', null, [], true) }}">العربية</a></li>
+                        </ul>
+                    </li>
                 </ul>
                 <!-- Main Menu Ends -->
             </div>

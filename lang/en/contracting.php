@@ -2,8 +2,11 @@
 
 return [
     'about' => [
-        'title' => 'About Al-Takhasos Contracting Company',
-        'intro' => 'At Al-Takhasos Contracting, we bring over 25 years of expertise to serve you, making us the ideal choice in the contracting field. 
+        'title' => 'About Us',
+        'subtitle' => 'About altakhassus Contracting Company',
+        'head' => 'altakhassus Contracting Company',
+        'why' => ' Why Choose Us',
+        'intro' => 'At altakhassus Contracting, we bring over 25 years of expertise to serve you, making us the ideal choice in the contracting field. 
         We combine technical efficiency with a commitment to quality, applying the latest global technologies to design and implement projects that meet our clients’ aspirations, 
         whether residential, commercial, or industrial. Our success is built on long-term partnerships based on trust and transparency, 
         and our vision is to always be your reliable partner in building a better future.',
@@ -96,7 +99,8 @@ return [
     ],
 
     'projects' => [
-        'title' => 'Our Key Projects',
+        'title' => 'Protfolio',
+        'subtitle' => 'Our Key Projects',
         'category' => 'HVAC',
         'category1' => 'Maintenance',
         'items' => [

@@ -2,8 +2,11 @@
 
 return [
     'about' => [
-        'title' => 'About Al-Takhasos Air Conditioning Company',
-        'intro' => 'At Al-Takhasos Company, we bring over 25 years of expertise to serve you, making us the ideal choice in air conditioning systems and solutions. 
+        'title' => 'About Us',
+        'head' => 'altakhassus Air Conditioning Company',
+        'subtitle' => 'About altakhassus Air Conditioning Company',
+        'why' => ' Why Choose Us',
+        'intro' => 'At altakhassus Company, we bring over 25 years of expertise to serve you, making us the ideal choice in air conditioning systems and solutions. 
         We combine technical efficiency with commitment to quality, applying the latest global technologies to design and implement HVAC systems that meet our clients’ aspirations, 
         whether residential, commercial, or industrial. Our success is built on long-term partnerships based on trust and transparency, 
         and our vision is to always be your trusted partner in providing ideal environments and high operational efficiency.',
@@ -41,6 +44,7 @@ return [
 
     'services' => [
         'title' => 'Our Services',
+        'subtitle' => 'Our Services',
         'items' => [
             [
                 'key'   => 'services1',

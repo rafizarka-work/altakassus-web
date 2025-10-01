@@ -4,7 +4,7 @@
             <div class="container">
                 <!-- Main Heading Starts -->
                 <div class="text-center top-text">
-                    <h1><span>Our</span> Services</h1>
+                    <h1><span>{{ __($ns.'.services.title') }}</span></h1>
                     <h4>{{ __($ns.'.services.title') }}</h4>
                 </div>
                 <!-- Main Heading Starts -->

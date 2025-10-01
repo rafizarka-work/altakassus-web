@@ -1,10 +1,10 @@
 <meta charset="utf-8" />
-    <title>Altakassus</title>
+    <title>altakhassus</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="http://via.placeholder.com/30x30">
-    @if (app()->getLocale()== "ar")
+    @if ($isAr)
     <!-- Template CSS Files -->
     <link rel="stylesheet" type="text/css" href="{{asset('rtl-file/css/bootstrap.min.css')}}" />
     <link rel="stylesheet" type="text/css" href="{{ asset('rtl-file/css/font-awesome.min.css') }}" />

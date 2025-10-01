@@ -2227,6 +2227,15 @@ body.dark .header.header-fixed .logo a img.logo-dark {
   font-weight: 600;
 }
 
+[id*="slide-"][id*="-btn"] {
+  text-align: center !important;
+  width: 100% !important;
+  left: 0 !important;
+  right: 0 !important;
+  transform: translateX(0) !important;
+  -webkit-transform: translateX(0) !important;
+}
+
 .tp-simpleresponsive .slider-button:before {
   content: "\f063";
   margin-top: -9px;
@@ -2597,7 +2606,7 @@ body.dark .header.header-fixed .logo a img.logo-dark {
 
 .services .services-box-item-cover:after {
   content: attr(data-headline);
-  font-family: "Raleway";
+  font-family: "CoconNextArabic-Regular";
   left: 0;
   width: 100%;
   margin: 20px 0 0;
@@ -2777,7 +2786,7 @@ body.dark .header.header-fixed .logo a img.logo-dark {
 }
 
 .portfolio .nav-pills li {
-  margin-right: 15px;
+  margin-left: 15px;
   border-radius: 40px;
   padding: 8px 30px;
   color: #555;
@@ -2812,7 +2821,7 @@ body.dark .header.header-fixed .logo a img.logo-dark {
 }
 
 .portfolio .caption .custom-button:before {
-  content: "\f061";
+  content: "\f060";
   margin-top: -10px;
 }
 
@@ -2823,7 +2832,7 @@ body.dark .header.header-fixed .logo a img.logo-dark {
 
 .portfolio .filtr-container .filtr-item {
   display: block;
-  float: left;
+  float: right;
   box-sizing: border-box;
 }
 
@@ -4888,6 +4897,18 @@ ul.bxslider img {
   opacity: 0.7;
 }
 
+/* RTL fix for bxslider */
+.bx-wrapper,
+.bx-viewport,
+ul.bxslider {
+  direction: ltr !important;
+}
+
+ul.bxslider li {
+  display: inline-block !important;
+  float: left !important;
+}
+
 
 /* Banner */
 
@@ -6948,4 +6969,166 @@ body.normal .portfolio .container 	{
 
 .dark .white-l {
   display: block;
+}
+
+/* RTL Slider text alignment - Multiple specificity levels */
+[dir="rtl"] .tp-caption {
+  text-align: center !important;
+}
+
+[dir="rtl"] .tp-caption.BigBold-Title {
+  text-align: center !important;
+}
+
+[dir="rtl"] .mainslider .tp-caption {
+  text-align: center !important;
+}
+
+[dir="rtl"] .mainslider .tp-caption.BigBold-Title {
+  text-align: center !important;
+}
+
+[dir="rtl"] #mainslider .tp-caption {
+  text-align: center !important;
+}
+
+[dir="rtl"] #mainslider .tp-caption.BigBold-Title {
+  text-align: center !important;
+}
+
+[dir="rtl"] .mainslider .tp-caption a {
+  margin: 0 auto;
+  display: inline-block;
+}
+
+/* Force center alignment on all Revolution Slider text layers */
+[dir="rtl"] .rev_slider .tp-caption,
+[dir="rtl"] .rev_slider_wrapper .tp-caption {
+  text-align: center !important;
+}
+
+html[dir="rtl"] .tp-caption,
+html[dir="rtl"] .BigBold-Title,
+html[lang="ar"] .tp-caption,
+html[lang="ar"] .BigBold-Title {
+  text-align: center !important;
+  direction: ltr;
+}
+
+/* Nuclear option - force center on ALL possible selectors */
+.tp-caption[id*="slide-"][id*="-title"],
+div[id*="slide-"][id*="-title"],
+.tp-caption.BigBold-Title.tp-resizeme,
+#mainslider .tp-caption[class*="BigBold"],
+.rev_slider .tp-caption,
+.tp-parallax-wrap .tp-caption,
+[class*="tp-caption"][id*="slide"] {
+  text-align: center !important;
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  left: 0 !important;
+  right: 0 !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  position: absolute !important;
+}
+
+/* Override Revolution Slider's transform positioning */
+.tp-caption[id*="-title"] {
+  transform: translateX(0) translateY(-50%) !important;
+  -webkit-transform: translateX(0) translateY(-50%) !important;
+}
+
+/* Force on wrapper too */
+.tp-parallax-wrap[data-x*="center"] {
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  -webkit-transform: translateX(-50%) !important;
+}
+
+/* Target the inner text specifically */
+.tp-caption[id*="-title"] * {
+  text-align: center !important;
+}
+
+/* RTL Portfolio fixes */
+.portfolio .nav-pills li {
+  margin-left: 15px !important;
+  margin-right: 0 !important;
+}
+
+.portfolio .filtr-container .filtr-item {
+  float: right !important;
+}
+
+.portfolio .caption {
+  text-align: right !important;
+}
+
+/* Fix portfolio items visibility in RTL */
+.portfolio .filtr-container {
+  overflow: visible !important;
+  min-height: auto !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: flex-start !important;
+}
+
+.portfolio .filtr-container .filtr-item {
+  float: none !important;
+  position: relative !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  margin-bottom: 30px !important;
+  flex: 0 0 33.333333% !important;
+  max-width: 33.333333% !important;
+  display: block !important;
+  transform: none !important;
+  -webkit-transform: none !important;
+}
+
+/* Responsive for tablets */
+@media (max-width: 991px) {
+  .portfolio .filtr-container .filtr-item {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+  }
+}
+
+/* Responsive for mobile */
+@media (max-width: 767px) {
+  .portfolio .filtr-container .filtr-item {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+}
+/* About Section Buttons */
+.about-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.about-buttons .custom-button {
+  flex: 1;
+  min-width: 180px;
+  text-align: center;
+  padding: 12px 25px;
+}
+
+.about-buttons .custom-button i {
+  margin-left: 8px;
+  margin-right: 0;
+}
+
+@media (max-width: 480px) {
+  .about-buttons {
+    flex-direction: column;
+  }
+  
+  .about-buttons .custom-button {
+    width: 100%;
+  }
 }

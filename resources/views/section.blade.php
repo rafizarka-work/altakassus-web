@@ -1,12 +1,13 @@
+@php($isAr = app()->getLocale() === 'ar')
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ app()->getLocale() }}" dir="{{ $isAr ? 'rtl' : 'ltr' }}">
 
 <head>
 
     @include('layouts.includes.styles')
 </head>
 
-<body class="">
+<body class="{{ $isAr ? 'rtl' : 'ltr' }}">
 
     <!-- Preloader Starts -->
     <div class="preloader" id="preloader">
@@ -42,11 +43,12 @@
         <!-- Newsletter Section Ends -->
         @include('layouts.includes.blog')
 
+
         @include('layouts.includes.call')
 
         @include('layouts.includes.logos')
-
         @include('layouts.includes.footer')
+        @include('layouts.includes.whatsapp')
         <!-- Back To Top Starts -->
         <div id="back-top-wrapper">
             <p id="back-top">

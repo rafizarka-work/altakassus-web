@@ -1,5 +1,6 @@
+@php($isAr = app()->getLocale() === 'ar')
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ app()->getLocale() }}" dir="{{ $isAr ? 'rtl' : 'ltr' }}">
 
 <head>
     @include('layouts.includes.styles')
@@ -27,7 +28,10 @@
             </div>
         </header>
         @include('layouts.includes.slider')
+        @php($ns = 'common')
+        @include('layouts.includes.about')
         @include('layouts.includes.footer')
+        @include('layouts.includes.whatsapp')
 
         <!-- Back To Top Starts -->
         <div id="back-top-wrapper">

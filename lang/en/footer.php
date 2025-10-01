@@ -1,9 +1,9 @@
 <?php
 
 return [
-    'brand' => 'altakassus',
+    'brand' => 'altakhassus',
     'menu' => [
-        'title' => 'altakassus',
+        'title' => 'altakhassus',
         'home' => 'Home',
         'about' => 'About',
         'pricing' => 'Pricing',
@@ -12,7 +12,7 @@ return [
     ],
     'contact' => [
         'title' => 'Contact Us',
-        'email' => 'contact@altakassus.com',
+        'email' => 'contact@altakhassus.com',
         'phone' => '00966544977774',
         'address' => 'rıyadh, saudi arabia',
         'hours' => 'Mon–Sat 08am → 05pm',
@@ -32,5 +32,5 @@ return [
         'youtube' => 'youtube',
     ],
     'copyright' => 'Copyright © :year :brand All Rights Reserved | Created with Love by :author',
-    'author_name' => 'altakassus',
+    'author_name' => 'altakhassus',
 ];

@@ -1,9 +1,9 @@
 <?php
 
 return [
-    'brand' => 'أميرة',
+    'brand' => 'التخصص',
     'menu' => [
-        'title' => 'أميرة',
+        'title' => 'التخصص',
         'home' => 'الرئيسية',
         'about' => 'من نحن',
         'pricing' => 'الأسعار',
@@ -12,11 +12,11 @@ return [
     ],
     'contact' => [
         'title' => 'تواصل معنا',
-        'email' => 'contact@website.com',
-        'phone' => '00216 21 184 010',
-        'address' => 'لندن، إنجلترا',
-        'hours' => 'الاثنين–السبت 08ص → 05م',
-        'skype' => 'altakassus.skype',
+        'email' => 'contact@altakhassus.com',
+        'phone' => '00966544977774',
+        'address' => 'الرياض، المملكة العربية السعودية  ',
+        'hours' => 'الأحد-الخميس 08ص → 05م',
+        'skype' => 'altakhassus.skype',
     ],
     'facts' => [
         'projects' => 'مشروع',
@@ -32,5 +32,5 @@ return [
         'youtube' => 'يوتيوب',
     ],
     'copyright' => '© :year :brand جميع الحقوق محفوظة | صُمّم بحب بواسطة :author',
-    'author_name' => 'celtano',
+    'author_name' => 'altakhassus',
 ];

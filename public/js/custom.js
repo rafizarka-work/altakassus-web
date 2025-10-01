@@ -1390,7 +1390,7 @@
                         sliderType: "standard",
                         sliderLayout: "fullscreen",
                         dottedOverlay: "none",
-                        delay: 9000,
+                        delay: 3000,
                         navigation: {
                             keyboardNavigation: "off",
                             keyboard_direction: "horizontal",
@@ -1431,9 +1431,9 @@
                         },
                         shadow: 0,
                         spinner: "off",
-                        stopLoop: "on",
-                        stopAfterLoops: 0,
-                        stopAtSlide: 1,
+                        stopLoop: "off",
+                        stopAfterLoops: -1,
+                        stopAtSlide: -1,
                         shuffle: "off",
                         autoHeight: "off",
                         fullScreenAlignForce: "off",
@@ -1468,6 +1468,25 @@
 
                     rev_scroll_effects.bind("revolution.slide.onloaded", function(e) {
                         rev_scroll_effects.revaddcallback(newCall);
+
+                        // Force center alignment for all title captions (RTL fix)
+                        setTimeout(function() {
+                            jQuery('[id*="slide-"][id*="-title"], .tp-caption.BigBold-Title').each(function() {
+                                var $elem = jQuery(this);
+                                $elem.css({
+                                    'text-align': 'center',
+                                    'width': '100%',
+                                    'left': '0',
+                                    'right': '0',
+                                    'margin-left': '0',
+                                    'margin-right': '0',
+                                    'transform': 'translateX(0) !important',
+                                    '-webkit-transform': 'translateX(0) !important'
+                                });
+                                var forceStyle = 'text-align: center !important; width: 100% !important; left: 0 !important; right: 0 !important;';
+                                this.setAttribute('style', (this.getAttribute('style') || '') + ';' + forceStyle);
+                            });
+                        }, 100);
                     });
                 }
             });

@@ -4,8 +4,8 @@
     <div class="container">
         <!-- Main Heading Starts -->
         <div class="text-center top-text">
-            <h1><span>About</span> Us</h1>
-            <h4>{{ __($ns . '.about.title') }}</h4>
+            <h1><span>{{ __($ns . '.about.title') }}</span></h1>
+            <h4>{{ __($ns . '.about.subtitle') }}</h4>
         </div>
         <!-- Main Heading Ends -->
         <!-- Divider Starts -->
@@ -18,7 +18,7 @@
         <!-- About Content Starts -->
         <div class="row about-content">
             <div class="col-sm-12 col-md-6 col-lg-6 about-left-side">
-                <h3 class="title-about">WE ARE <strong>Altakassus</strong></h3>
+                <h3 class="title-about"><strong>{{ __($ns . '.about.head') }}</strong></h3>
                 <hr>
 
                 {{-- الفقرة التعريفية --}}
@@ -66,7 +66,16 @@
                 </div>
                 <!-- Tabs Content Ends -->
 
-                <a class="custom-button" href="{{ route('index') }}">{{ __('common.actions.read_more') }}</a>
+                @if($ns === 'common')
+                    <div class="about-buttons">
+                        <a class="custom-button" href="{{ route('contractors') }}">
+                            <i class="fa fa-building"></i> {{ __('common.nav.contracting') }}
+                        </a>
+                        <a class="custom-button" href="{{ route('conditioning') }}">
+                            <i class="fa fa-snowflake-o"></i> {{ __('common.nav.hvac') }}
+                        </a>
+                    </div>
+                @endif
             </div>
 
             <div class="col-md-6 col-lg-6 about-right-side">
@@ -74,7 +83,7 @@
                     <img class="img-responsive hidden-xs" src="{{ asset(__('' . $ns . '.about.image')) }}" alt="">
 
                     <div class="full-image-overlay">
-                        <h3>Why Choose Us</h3>
+                        <h3>{{ __($ns . '.about.why') }}</h3>
 
                         @php($advantagesRight = Lang::get($ns . '.about.tabs.advantages.items'))
                         @if (is_array($advantagesRight))

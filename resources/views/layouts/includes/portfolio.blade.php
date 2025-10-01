@@ -4,8 +4,8 @@
     <div class="container">
         <!-- Main Heading Starts -->
         <div class="text-center top-text">
-            <h1><span>Our</span> Portfolio</h1>
-            <h4>{{ __($ns . '.projects.title') }}</h4>
+            <h1><span>{{ __($ns . '.projects.title') }}</span></h1>
+            <h4>{{ __($ns . '.projects.subtitle') }}</h4>
         </div>
         <!-- Main Heading Starts -->
         <!-- Divider Starts -->
@@ -27,15 +27,18 @@
             </ul>
         </nav>
         <!-- Filter Wrapper Ends -->
-        <div>
-            <div class="filtr-container">
-                <!-- Project Starts -->
-                @php
-                    $projects = Lang::get($ns . '.projects.items');
-                @endphp
+        <!-- Project Starts -->
+        @php
+            $projects = Lang::get($ns . '.projects.items');
+            // Debug: Check items count
+            if (!is_array($projects)) {
+                $projects = [];
+            }
+        @endphp
+        <!-- Debug: Total projects = {{ count($projects) }} -->
 
-                <div class="row filtr-container">
-                    @foreach ($projects as $proj)
+        <div class="row filtr-container">
+            @foreach ($projects as $proj)
                         <div class="col-xs-12 col-sm-6 col-md-4 filtr-item" data-category="1">
                             <div class="magnific-popup-gallery">
 
@@ -64,9 +67,7 @@
                                 {{-- Caption Ends --}}
                             </div>
                         </div>
-                    @endforeach
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
     <!-- Container Ends -->
