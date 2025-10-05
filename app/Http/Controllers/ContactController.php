@@ -18,6 +18,8 @@ class ContactController extends Controller
 
         try {
             // Send email
+            // dd($validated);
+
             Mail::send('emails.contact', $validated, function ($message) use ($validated) {
                 $message->to(config('mail.from.address'))
                     ->subject('New Contact Form Submission from ' . $validated['name']);

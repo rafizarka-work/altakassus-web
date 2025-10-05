@@ -54,22 +54,19 @@
 
                              <!-- Title -->
                              @if ($title)
-                                 <div class="tp-caption BigBold-Title tp-resizeme"
-     id="slide-{{ $idx }}-title"
-     data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
-     data-y="['middle','middle','middle','middle']" data-voffset="['-40','-40','-30','-20']"
-     data-fontsize="['64','56','42','32']" data-lineheight="['70','62','48','38']"
-     data-whitespace="normal" data-width="['100%','100%','100%','100%']"
-     data-transform_in="y:[100%];opacity:0;s:800;e:Power3.easeInOut;"
-     data-transform_out="y:[100%];opacity:0;s:600;e:Power2.easeInOut;"
-     data-start="500"
-     data-textalign="['center','center','center','center']"
-     data-responsive_offset="on"
-     data-paddingleft="['0','0','0','0']"
-     data-paddingright="['0','0','0','0']"
-     style="z-index:6; white-space:normal; width:100%; text-align:center !important; padding:0 20px; box-sizing:border-box;">
-  {{ $title }}
-</div>
+                                 <div class="tp-caption BigBold-Title tp-resizeme" id="slide-{{ $idx }}-title"
+                                     data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                                     data-y="['middle','middle','middle','middle']"
+                                     data-voffset="['-40','-40','-30','-20']" data-fontsize="['64','56','42','32']"
+                                     data-lineheight="['70','62','48','38']" data-whitespace="normal"
+                                     data-width="['100%','100%','100%','100%']"
+                                     data-transform_in="y:[100%];opacity:0;s:800;e:Power3.easeInOut;"
+                                     data-transform_out="y:[100%];opacity:0;s:600;e:Power2.easeInOut;" data-start="500"
+                                     data-textalign="['center','center','center','center']" data-responsive_offset="on"
+                                     data-paddingleft="['0','0','0','0']" data-paddingright="['0','0','0','0']"
+                                     style="z-index:6; white-space:normal; width:100%; text-align:center !important; padding:0 20px; box-sizing:border-box;">
+                                     {{ $title }}
+                                 </div>
                              @endif
 
                              <!-- Subtitle -->
@@ -94,7 +91,8 @@
                                      data-transform_in="y:[100%];opacity:0;s:1500;e:Power3.easeInOut;"
                                      data-transform_out="y:50px;opacity:0;s:1000;e:Power2.easeInOut;" data-start="650"
                                      style="z-index:8;">
-                                     <a href="{{ url('contractors') }}" class="custom-button slider-button scroll-to-target">
+                                     <a href="{{ url('contractors') }}"
+                                         class="custom-button slider-button scroll-to-target">
                                          {{ $btnTxt }}
                                      </a>
                                  </div>
@@ -131,7 +129,8 @@
                          });
 
                          // Use setAttribute to force styles
-                         var forceStyle = 'text-align: center !important; width: 100% !important; left: 0 !important; right: 0 !important; direction: ltr !important;';
+                         var forceStyle =
+                             'text-align: center !important; width: 100% !important; left: 0 !important; right: 0 !important; direction: ltr !important;';
                          this.setAttribute('style', (this.getAttribute('style') || '') + ';' + forceStyle);
                      });
                  }
