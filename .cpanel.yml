@@ -7,6 +7,3 @@ deployment:
     - /bin/sed -i "s#__DIR__\\.'/../storage/framework/maintenance\\.php'#'$REPOPATH/storage/framework/maintenance.php'#g" $DEPLOYPATH/index.php
     - /bin/sed -i "s#__DIR__\\.'/../vendor/autoload\\.php'#'$REPOPATH/vendor/autoload.php'#g" $DEPLOYPATH/index.php
     - /bin/sed -i "s#__DIR__\\.'/../bootstrap/app\\.php'#'$REPOPATH/bootstrap/app.php'#g" $DEPLOYPATH/index.php
-    - /usr/local/bin/php $REPOPATH/artisan cache:clear
-    - /usr/local/bin/php $REPOPATH/artisan config:clear
-    - /usr/local/bin/php $REPOPATH/artisan view:clear
