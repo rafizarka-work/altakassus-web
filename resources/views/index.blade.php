@@ -1,7 +1,6 @@
 @php($isAr = app()->getLocale() === 'ar')
 <!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}" dir="{{ $isAr ? 'rtl' : 'ltr' }}">
-
 <head>
     @include('layouts.includes.styles')
 
