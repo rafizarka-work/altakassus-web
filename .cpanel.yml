@@ -2,6 +2,8 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/altayapp/public_html/
+    - export REPOPATH=/home/altayapp/repositories/altakassus-web
     - /bin/rm -rf $DEPLOYPATH/*
     - /bin/cp -R public/* $DEPLOYPATH/
-    - /bin/rm -rf $DEPLOYPATH/.git
+    - /bin/sed -i "s|__DIR__.'/../vendor/autoload.php'|'$REPOPATH/vendor/autoload.php'|g" $DEPLOYPATH/index.php
+    - /bin/sed -i "s|__DIR__.'/../bootstrap/app.php'|'$REPOPATH/bootstrap/app.php'|g" $DEPLOYPATH/index.php
