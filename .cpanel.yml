@@ -1,9 +1,8 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/altayapp/public_html/
-    - export REPOPATH=/home/altayapp/repositories/altakassus-web/laravel
-    - /bin/rm -rf $DEPLOYPATH/*
-    - /bin/cp -R $REPOPATH/public/. $DEPLOYPATH/
+    - export DEPLOYPATH=/home/altayapp/public_html
+    - export REPOPATH=/home/altayapp/repositories/altakassus-web
+    - /bin/cp -R $REPOPATH/public/* $DEPLOYPATH/
     - /bin/sed -i "s|__DIR__.'/../vendor/autoload.php'|'$REPOPATH/vendor/autoload.php'|g" $DEPLOYPATH/index.php
     - /bin/sed -i "s|__DIR__.'/../bootstrap/app.php'|'$REPOPATH/bootstrap/app.php'|g" $DEPLOYPATH/index.php
