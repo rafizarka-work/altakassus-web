@@ -3,5 +3,5 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/altayapp/public_html/
     - /bin/rm -rf $DEPLOYPATH/*
-    - /bin/cp -R public_html/public/* $DEPLOYPATH/
+    - /bin/cp -R public/* $DEPLOYPATH/
     - /bin/rm -rf $DEPLOYPATH/.git
