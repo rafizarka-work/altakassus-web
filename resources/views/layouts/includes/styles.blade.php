@@ -3,7 +3,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="http://via.placeholder.com/30x30">
+    <link rel="shortcut icon" href="{{asset('favicon.ico')}}" type="image/x-icon">
     @if ($isAr)
     <!-- Template CSS Files -->
     <link rel="stylesheet" type="text/css" href="{{asset('rtl-file/css/bootstrap.min.css')}}" />

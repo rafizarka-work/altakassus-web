@@ -21,8 +21,7 @@
                 <!-- Filter Wrapper Items Starts -->
                 <li class="active" data-filter="all"><i class="fa fa-reorder"></i> {{ __($ns . '.projects.category') }}</li>
                 <li data-filter="1">{{ __($ns . '.projects.category1') }}</li>
-                {{-- <li data-filter="2">Videos</li>
-                <li data-filter="3">External Links</li> --}}
+                <li data-filter="2">{{ __($ns . '.projects.category2') }}</li>
                 <!-- Filter Wrapper Items Ends -->
             </ul>
         </nav>
@@ -34,12 +33,20 @@
             if (!is_array($projects)) {
                 $projects = [];
             }
+            // Debug output
+            if (app()->getLocale() === 'ar') {
+                \Log::info('Portfolio Debug - Total projects: ' . count($projects));
+                foreach($projects as $idx => $proj) {
+                    \Log::info("Project $idx: {$proj['title']} - Category: " . ($proj['category'] ?? 'none'));
+                }
+            }
         @endphp
-        <!-- Debug: Total projects = {{ count($projects) }} -->
+        <!-- Total projects in blade: {{ count($projects) }} -->
 
         <div class="row filtr-container">
             @foreach ($projects as $proj)
-                        <div class="col-xs-12 col-sm-6 col-md-4 filtr-item" data-category="1">
+                        <!-- {{ $proj['title'] ?? 'No title' }} - Cat: {{ $proj['category'] ?? 'none' }} -->
+                        <div class="col-xs-12 col-sm-6 col-md-4 filtr-item" data-category="{{ $proj['category'] ?? '1' }}">
                             <div class="magnific-popup-gallery">
 
                                 {{-- Thumbnail Starts --}}

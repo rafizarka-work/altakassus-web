@@ -23,27 +23,30 @@
                  <!-- Article Starts -->
                  <div class="col-sm-4 col-md-4 col-xs-12">
                      <div class="latest-post">
-                         <!-- Featured Image Starts -->
-                         <a class="img-thumb" href="blog-post.html"><img class="img-responsive"
-                                 src="http://via.placeholder.com/720x477" alt="img"></a>
-                         <!-- Featured Image Ends -->
-                         <!-- Article Content Starts -->
-                         <div class="post-body">
-                             <h4 class="post-title">
-                                 <a href="blog-post.html">{{ $blog['title'] }}</a>
-                             </h4>
-                             <div class="post-text">
-                                 <p>{{ $blog['subtitle'] }}</p>
-                             </div>
-                         </div>
-                         <!-- Post Date Starts -->
-                         <div class="post-date">
-                             <span>18</span>
-                             <span>AUG</span>
-                         </div>
-                         <!-- Post Date Ends -->
-                         <a class="custom-button" href="blog-post.html">{{ $blog['label'] }}</a>
-                         <!-- Article Content Ends -->
+                        <!-- Featured Image Starts -->
+                        <a class="img-thumb" href="{{ route('blog.detail', ['slug' => $blog['slug']]) }}">
+                            <img class="img-responsive"
+                                 src="{{ asset($blog['thumbnail'] ?? $blog['image'] ?? 'img/blog/placeholder.jpg') }}"
+                                 alt="{{ $blog['title'] }}">
+                        </a>
+                        <!-- Featured Image Ends -->
+                        <!-- Article Content Starts -->
+                        <div class="post-body">
+                            <h4 class="post-title">
+                                <a href="{{ route('blog.detail', ['slug' => $blog['slug']]) }}">{{ $blog['title'] }}</a>
+                            </h4>
+                            <div class="post-text">
+                                <p>{{ $blog['subtitle'] }}</p>
+                            </div>
+                        </div>
+                        <!-- Post Date Starts -->
+                        <div class="post-date">
+                            <span>15</span>
+                            <span>JAN</span>
+                        </div>
+                        <!-- Post Date Ends -->
+                        <a class="custom-button" href="{{ route('blog.detail', ['slug' => $blog['slug']]) }}">{{ $blog['label'] }}</a>
+                        <!-- Article Content Ends -->
                      </div>
                  </div>
              @endforeach

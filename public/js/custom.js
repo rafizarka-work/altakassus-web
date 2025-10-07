@@ -51,10 +51,6 @@
         /*  FILTERABLE PORTFOLIO
         /* ----------------------------------------------------------- */
 
-        $(".simplefilter li").on("click", function() {
-            $(".simplefilter li").removeClass("active");
-            $(this).addClass("active");
-        });
         var options = {
             animationDuration: 0.6,
             filter: "all",
@@ -67,12 +63,30 @@
             easing: "ease-out",
             layout: "sameSize",
             selector: ".filtr-container",
-            setupControls: true
+            setupControls: false
         }
         var filterizr_container = $('.filtr-container');
         if (filterizr_container.length) {
             var filterizd = $(".filtr-container").filterizr(options);
-            filterizd.filterizr("setOptions", options);
+
+            // Set up custom filter controls
+            $(".simplefilter li").on("click", function() {
+                var filter = $(this).attr("data-filter");
+                $(".simplefilter li").removeClass("active");
+                $(this).addClass("active");
+
+                // Explicitly handle 'all' filter
+                if (filter === 'all') {
+                    filterizd.filterizr('filter', 'all');
+                } else {
+                    filterizd.filterizr('filter', filter);
+                }
+            });
+
+            // Trigger 'all' filter on load to ensure all items are visible
+            setTimeout(function() {
+                filterizd.filterizr('filter', 'all');
+            }, 100);
         }
 
     });

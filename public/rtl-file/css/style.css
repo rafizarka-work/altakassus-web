@@ -7054,53 +7054,70 @@ div[id*="slide-"][id*="-title"],
 
 /* RTL Portfolio fixes */
 .portfolio .nav-pills li {
-  margin-left: 15px !important;
-  margin-right: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 15px !important;
+}
+
+/* Force normal flow layout for RTL - override Filterizr's absolute positioning */
+.portfolio .filtr-container {
+  direction: rtl;
+  display: block !important;
+  position: relative !important;
+  height: auto !important;
+  min-height: 0 !important;
 }
 
 .portfolio .filtr-container .filtr-item {
   float: right !important;
+  direction: ltr;
+  position: static !important;
+  left: auto !important;
+  right: auto !important;
+  top: auto !important;
+  transform: none !important;
+  -webkit-transform: none !important;
+  width: 33.333333% !important;
+  display: block !important;
+  margin-bottom: 30px !important;
+  opacity: 1 !important;
+  transition: opacity 0.6s ease-out, height 0.6s ease-out, margin 0.6s ease-out !important;
+}
+
+/* Smooth hide for filtered out items */
+.portfolio .filtr-container .filtr-item[style*="display: none"] {
+  opacity: 0 !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  transition: opacity 0.4s ease-out, height 0.4s ease-out 0.2s, margin 0.4s ease-out 0.2s, padding 0.4s ease-out 0.2s !important;
+}
+
+.portfolio .filtr-container .filtr-item[style*="opacity: 0"] {
+  opacity: 0 !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  transition: opacity 0.4s ease-out, height 0.4s ease-out 0.2s, margin 0.4s ease-out 0.2s, padding 0.4s ease-out 0.2s !important;
 }
 
 .portfolio .caption {
   text-align: right !important;
-}
-
-/* Fix portfolio items visibility in RTL */
-.portfolio .filtr-container {
-  overflow: visible !important;
-  min-height: auto !important;
-  display: flex !important;
-  flex-wrap: wrap !important;
-  justify-content: flex-start !important;
-}
-
-.portfolio .filtr-container .filtr-item {
-  float: none !important;
-  position: relative !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-  margin-bottom: 30px !important;
-  flex: 0 0 33.333333% !important;
-  max-width: 33.333333% !important;
-  display: block !important;
-  transform: none !important;
-  -webkit-transform: none !important;
+  direction: rtl;
 }
 
 /* Responsive for tablets */
 @media (max-width: 991px) {
   .portfolio .filtr-container .filtr-item {
-    flex: 0 0 50% !important;
-    max-width: 50% !important;
+    width: 50% !important;
   }
 }
 
 /* Responsive for mobile */
 @media (max-width: 767px) {
   .portfolio .filtr-container .filtr-item {
-    flex: 0 0 100% !important;
-    max-width: 100% !important;
+    width: 100% !important;
   }
 }
 /* About Section Buttons */

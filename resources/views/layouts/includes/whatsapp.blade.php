@@ -1,16 +1,16 @@
 <!-- WhatsApp Floating Button -->
 @php
     // Set WhatsApp number based on current route
-    $whatsappNumber = '966500000000'; // Default number
+    $whatsappNumber = '966544977774'; // Default number
     $whatsappMessage = 'مرحباً، أود الاستفسار عن خدماتكم';
 
     if (request()->routeIs('contractors')) {
-        $whatsappNumber = '966500000001'; // Contracting department number
+        $whatsappNumber = '966544977774'; // Contracting department number
         $whatsappMessage = app()->getLocale() == 'ar'
             ? 'مرحباً، أود الاستفسار عن خدمات المقاولات'
             : 'Hello, I would like to inquire about contracting services';
     } elseif (request()->routeIs('conditioning')) {
-        $whatsappNumber = '966500000002'; // HVAC department number
+        $whatsappNumber = '966532493322'; // HVAC department number
         $whatsappMessage = app()->getLocale() == 'ar'
             ? 'مرحباً، أود الاستفسار عن خدمات التكييف'
             : 'Hello, I would like to inquire about HVAC services';

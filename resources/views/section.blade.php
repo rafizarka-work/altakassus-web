@@ -12,7 +12,7 @@
     <!-- Preloader Starts -->
     <div class="preloader" id="preloader">
         <div class="logopreloader">
-            <img src="{{ asset('img/logos/condation.svg') }}" alt="logo" />
+            <img src="{{ asset('img/logos/condation-and-constract.svg') }}" alt="logo" />
         </div>
         <div class="loader" id="loader"></div>
     </div>

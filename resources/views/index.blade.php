@@ -1,6 +1,7 @@
 @php($isAr = app()->getLocale() === 'ar')
 <!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}" dir="{{ $isAr ? 'rtl' : 'ltr' }}">
+
 <head>
     @include('layouts.includes.styles')
 
@@ -10,7 +11,7 @@
     <!-- Preloader Starts -->
     <div class="preloader" id="preloader">
         <div class="logopreloader">
-            <img src="{{ asset('img/logos/condation.svg') }}" alt="logo" />
+            <img src="{{ asset('img/logos/condation-and-constract.svg') }}" alt="logo" />
         </div>
         <div class="loader" id="loader"></div>
     </div>

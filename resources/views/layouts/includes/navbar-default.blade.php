@@ -3,8 +3,8 @@
             <!-- Logo Starts -->
             <div class="logo">
                 <a data-toggle="collapse" data-target=".navbar-collapse.show" class="navbar-brand" href="{{ url('') }}">
-                    <img id="logo-light" class="logo-light" src="{{ asset('img/logos/condation.svg') }}" alt="logo-light" />
-                    <img id="logo-dark" class="logo-dark" src="{{ asset('img/logos/condation.svg') }}" alt="logo-dark" />
+                    <img id="logo-light" class="logo-light" src="{{ asset('img/logos/condation-and-constract.svg') }}" alt="logo-light" />
+                    <img id="logo-dark" class="logo-dark" src="{{ asset('img/logos/condation-and-constract.svg') }}" alt="logo-dark" />
                 </a>
             </div>
             <!-- Logo Ends -->

@@ -49,13 +49,17 @@ return [
     ],
 ],
 
+    'blogs' => [
+        'other_articles' => 'Other Articles',
+    ],
+
     'about' => [
         'title' => 'About Us',
         'subtitle' => 'Who We Are',
         'head' => 'Altakhassus Company',
         'why' => 'Why Us',
         'intro' => 'At Altakhassus, we provide integrated solutions in contracting and air conditioning, with over 25 years of experience. We combine technical efficiency and commitment to quality, applying the latest global technologies to design and execute projects that meet our clients\' aspirations. Our success is built on long-term partnerships based on trust and transparency.',
-        'image' => 'img/about/about-home.png',
+        'image' => 'img/about/about-home.jpg',
         'tabs' => [
             'mission' => [
                 'title' => 'Our Mission',
