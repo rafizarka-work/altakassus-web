@@ -1,5 +1,5 @@
 <!-- Navbar Starts -->
-        <nav class="navbar">
+        <nav class="navbar {{ app()->getLocale() == 'en' ? 'navbar-en' : '' }}">
             <!-- Logo Starts -->
             <div class="logo">
                 <a data-toggle="collapse" data-target=".navbar-collapse.show" class="navbar-brand" href="{{ url('') }}">

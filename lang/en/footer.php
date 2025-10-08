@@ -25,11 +25,8 @@ return [
         'clients' => 'clients',
     ],
     'social' => [
-        'twitter' => 'twitter',
-        'facebook' => 'facebook',
-        'google' => 'google',
-        'linkedin' => 'linkedin',
-        'youtube' => 'youtube',
+        'instagram' => 'instagram',
+        'whatsapp' => 'whatsapp',
     ],
     'copyright' => 'Copyright © :year :brand All Rights Reserved | Created with Love by :author',
     'author_name' => 'altakhassus',

@@ -96,9 +96,11 @@ body {
   position: relative;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 .wrapper {
   overflow: hidden;
@@ -1598,13 +1600,19 @@ a:hover {
 }
 
 .logo a {
-  width: 150px;
+  width: 150px !important;
   display: block;
-  margin: 35px 0 0 30px;
+  margin: 0px 0 0 0;
   transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -webkit-transition: all 0.3s ease 0s;
+}
+
+/* Ensure consistent logo size when header is fixed/scrolled */
+.header-fixed .logo a {
+  width: 150px !important;
+  margin: 0px 0 0 0;
 }
 
 .logo a img {
@@ -5823,6 +5831,10 @@ h4.panel-title a.collapsed:before {
   content: "\f167";
 }
 
+.social-icons ul li a[title="whatsapp"]:before {
+  content: "\f232";
+}
+
 
 /* Back To Top
 ---------------------------------------- */
@@ -6379,9 +6391,10 @@ body.double-diagonal .newsletter .section-overlay, body.double-diagonal .call-to
   .header {
     height: 65px;
   }
-  .header .logo a {
-    margin: 23px 0 0 0;
-    width: 100px;
+  .header .logo a,
+  .header-fixed .logo a {
+    margin: 5px 0 0 0;
+    width: 120px !important;
     transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
     -moz-transition: all 0.3s ease 0s;
@@ -6444,7 +6457,8 @@ body.double-diagonal .newsletter .section-overlay, body.double-diagonal .call-to
 
 @media (max-width: 767px) {
   .container {
-    width: 570px;
+    width: 100%;
+    max-width: 570px;
   }
   .banner .content {
     padding: 150px 0;
@@ -7147,5 +7161,81 @@ div[id*="slide-"][id*="-title"],
   
   .about-buttons .custom-button {
     width: 100%;
+  }
+}
+
+/* English navbar layout - menu on left, logo on right (desktop only) */
+@media (min-width: 992px) {
+    .navbar-en .logo {
+        float: right !important;
+        text-align: right !important;
+    }
+
+    .navbar-en .navbar-collapse {
+        float: left !important;
+    }
+}
+
+/* Footer Mobile Spacing */
+@media (max-width: 767px) {
+  .footer .top-footer .row > div {
+    margin-bottom: 30px;
+  }
+  
+  .footer .top-footer .row > div:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/* Ensure all images are responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Logo images in carousel */
+.logos ul li img {
+  max-width: 150px;
+  width: 100%;
+  height: auto !important;
+}
+
+/* Slider button centering fix for RTL */
+.tp-caption a.slider-button,
+.tp-caption .slider-button {
+  display: inline-block;
+  text-align: center;
+}
+
+[id*="slide-"][id*="-btn"] {
+  text-align: center !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+[id*="slide-"][id*="-btn"] a {
+  margin: 0 auto !important;
+}
+
+/* Fix services cards equal height on mobile */
+@media (max-width: 767px) {
+  .services .services-box-item {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .services .services-box-item-content {
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .services .services-box-item-content h2 {
+    flex-shrink: 0;
+  }
+  
+  .services .services-box-item-content p {
+    flex-grow: 1;
   }
 }

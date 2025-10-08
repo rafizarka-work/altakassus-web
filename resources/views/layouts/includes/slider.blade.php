@@ -49,7 +49,7 @@
                                  data-transform_in="opacity:0;s:1500;e:Power2.easeInOut;"
                                  data-transform_out="opacity:0;s:1000;" data-start="0" data-basealign="slide"
                                  data-responsive_offset="off" data-responsive="off"
-                                 style="z-index:5;background:linear-gradient(to bottom,rgba(0,0,0,0) 0%,rgba(0,0,0,.45) 100%);">
+                                 style="z-index:5;">
                              </div>
 
                              <!-- Title -->
@@ -90,8 +90,13 @@
                                      data-y="['middle','middle','middle','middle']" data-voffset="['80','80','80','80']"
                                      data-transform_in="y:[100%];opacity:0;s:1500;e:Power3.easeInOut;"
                                      data-transform_out="y:50px;opacity:0;s:1000;e:Power2.easeInOut;" data-start="650"
-                                     style="z-index:8;">
-                                     <a href="{{ url('contractors') }}"
+                                     data-textalign="['center','center','center','center']"
+                                    style="z-index:8; text-align:center !important;">
+                                     @php
+                                        $btnLinks = ['#about', url('contractors'), url('conditioning')];
+                                        $btnHref = $btnLinks[$i] ?? '#';
+                                    @endphp
+                                    <a href="{{ $btnHref }}"
                                          class="custom-button slider-button scroll-to-target">
                                          {{ $btnTxt }}
                                      </a>

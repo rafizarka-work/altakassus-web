@@ -3,21 +3,20 @@
     <div class="container top-footer">
         <div class="row">
             <!-- Footer Widget: Menu -->
-            <div class="col-xs-6 col-sm-4 col-md-2">
+            <div class="col-xs-12 col-sm-4 col-md-2">
                 <h4>{{ __('footer.menu.title') }}</h4>
                 <div class="menu">
                     <ul>
-                        <li><a href="{{ url('') }}">{{ __('footer.menu.home') }}</a></li>
-                        <li><a href="{{ url('about.html') }}">{{ __('footer.menu.about') }}</a></li>
-                        <li><a href="{{ url('pricing.html') }}">{{ __('footer.menu.pricing') }}</a></li>
-                        <li><a href="{{ url('portfolio-3-columns.html') }}">{{ __('footer.menu.portfolio') }}</a></li>
-                        <li><a href="{{ url('blog-right-sidebar.html') }}">{{ __('footer.menu.blog') }}</a></li>
+                        <li><a href="{{ url('') }}">{{ __('header.menu.home') }}</a></li>
+                        <li><a href="{{ url('contractors') }}">{{ __('header.menu.contracting') }}</a></li>
+                        <li><a href="{{ url('conditioning') }}">{{ __('header.menu.conditioning') }}</a></li>
+                        <li><a href="#about">{{ __('header.menu.about') }}</a></li>
                     </ul>
                 </div>
             </div>
 
             <!-- Footer Widget: Contact -->
-            <div class="col-xs-6 col-sm-4 col-md-3">
+            <div class="col-xs-12 col-sm-4 col-md-3">
                 <h4>{{ __('footer.contact.title') }}</h4>
                 <div class="menu">
                     <ul>
@@ -31,22 +30,14 @@
             </div>
 
             <!-- Footer Widget: Facts + Social -->
-            <div class="col-xs-6 col-sm-12 col-md-4">
+            <div class="col-xs-12 col-sm-4 col-md-4">
                 <div class="facts-footer">
                     <div>
-                        <h5>77,991</h5>
+                        <h5>25</h5>
                         <span>{{ __('footer.facts.projects') }}</span>
                     </div>
                     <div>
-                        <h5>80,217</h5>
-                        <span>{{ __('footer.facts.hours_work') }}</span>
-                    </div>
-                    <div>
-                        <h5>1,253</h5>
-                        <span>{{ __('footer.facts.offices') }}</span>
-                    </div>
-                    <div>
-                        <h5>17,361</h5>
+                        <h5>30</h5>
                         <span>{{ __('footer.facts.clients') }}</span>
                     </div>
                 </div>
@@ -55,11 +46,8 @@
 
                 <div class="social-icons">
                     <ul class="social">
-                        <li><a class="twitter" href="#" title="{{ __('footer.social.twitter') }}"></a></li>
-                        <li><a class="facebook" href="#" title="{{ __('footer.social.facebook') }}"></a></li>
-                        <li><a class="google" href="#" title="{{ __('footer.social.google') }}"></a></li>
-                        <li><a class="linkedin" href="#" title="{{ __('footer.social.linkedin') }}"></a></li>
-                        <li><a class="youtube" href="#" title="{{ __('footer.social.youtube') }}"></a></li>
+                        <li><a class="instagram" href="#" title="{{ __('footer.social.instagram') }}"></a></li>
+                        <li><a class="whatsapp" href="https://wa.me/966544977774" title="{{ __('footer.social.whatsapp') }}"></a></li>
                     </ul>
                 </div>
             </div>

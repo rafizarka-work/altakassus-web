@@ -57,10 +57,10 @@
             <label>Email:</label>
             <p>{{ $email }}</p>
         </div>
-        @if(isset($message) && $message)
+        @if(isset($user_message) && $user_message)
         <div class="field">
             <label>Message:</label>
-            <p>{{ $message }}</p>
+            <p>{{ $user_message }}</p>
         </div>
         @endif
     </div>

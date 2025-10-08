@@ -17,10 +17,15 @@ class ContactController extends Controller
         ]);
 
         try {
-            // Send email
-            // dd($validated);
+            // Rename 'message' to 'user_message' to avoid conflict with Mail $message variable
+            $data = [
+                'name' => $validated['name'],
+                'phone' => $validated['phone'],
+                'email' => $validated['email'],
+                'user_message' => $validated['message'] ?? '',
+            ];
 
-            Mail::send('emails.contact', $validated, function ($message) use ($validated) {
+            Mail::send('emails.contact', $data, function ($message) use ($validated) {
                 $message->to(config('mail.from.address'))
                     ->subject('New Contact Form Submission from ' . $validated['name']);
                 $message->replyTo($validated['email'], $validated['name']);
@@ -28,7 +33,7 @@ class ContactController extends Controller
 
             return back()->with('success', __('common.contact.success'));
         } catch (\Exception $e) {
-            return back()->with('error', __('common.contact.error'))->withInput();
+            return back()->with('error', __('common.contact.error') . ' - ' . $e->getMessage())->withInput();
         }
     }
 }

@@ -176,14 +176,8 @@ return [
             [
                 'key'   => 'projects',
                 'icon'  => 'fa fa-briefcase',
-                'count' => '76+',
+                'count' => '25+',
                 'label' => 'Projects',
-            ],
-            [
-                'key'   => 'hours',
-                'icon'  => 'fa fa-clock-o',
-                'count' => '90+',
-                'label' => 'Work Hours',
             ],
             [
                 'key'   => 'offices',
@@ -194,7 +188,7 @@ return [
             [
                 'key'   => 'clients',
                 'icon'  => 'fa fa-user',
-                'count' => '67+',
+                'count' => '30+',
                 'label' => 'Clients',
             ],
         ],

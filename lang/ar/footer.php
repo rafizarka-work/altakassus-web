@@ -25,11 +25,8 @@ return [
         'clients' => 'عميل',
     ],
     'social' => [
-        'twitter' => 'تويتر',
-        'facebook' => 'فيسبوك',
-        'google' => 'جوجل',
-        'linkedin' => 'لينكدإن',
-        'youtube' => 'يوتيوب',
+        'instagram' => 'instagram',
+        'whatsapp' => 'whatsapp',
     ],
     'copyright' => '© :year :brand جميع الحقوق محفوظة | صُمّم بحب بواسطة :author',
     'author_name' => 'altakhassus',
